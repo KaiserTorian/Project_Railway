@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Project Railway"
+config/name="Project_Railway"
 run/main_scene="uid://crmwp0pdxv0dl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
@@ -20,22 +20,6 @@ config/icon="res://icon.svg"
 Uid="*res://globals/uid.gd"
 ItemManager="*res://globals/item_manager.gd"
 
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Hidefolders/plugin.cfg", "res://addons/fancy_folder_colors/plugin.cfg")
-
-[file_customization]
-
-folder_colors={
-"res://addons/": "gray",
-"res://characters/": "teal",
-"res://globals/": "blue",
-"res://items/": "red",
-"res://nodes/": "yellow",
-"res://scenes/": "green"
-}
