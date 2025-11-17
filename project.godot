@@ -23,3 +23,13 @@ ItemManager="*res://globals/item_manager.gd"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Hidefolders/plugin.cfg", "res://addons/fancy_folder_colors/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://characters/": "red",
+"res://globals/": "orange",
+"res://items/": "yellow",
+"res://scenes/": "green"
+}

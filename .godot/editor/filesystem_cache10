@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763395549
+::res://::1763395907
 icon.svg::CompressedTexture2D::7171682992444053840::1763395139::1763395186::1::::<><><>0<>0<>8658914f25c64f907ffa3e7d1dc2c244<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1763394738
 ::res://addons/fancy_folder_colors/::1763394989
@@ -11,7 +11,7 @@ plugin.gd::GDScript::5324725113501311391::1763394738::0::1::::<>EditorPlugin<><>
 icon.svg::CompressedTexture2D::8781965263958745467::1763394738::1763394989::1::::<><><>0<>0<>bfda5fce7b49670a583a56dab10d2ace<>res://.godot/imported/icon.svg-442b916f61deaacef6bb9b6a702de838.ctex::
 readme.txt::TextFile::-1::1763394738::0::1::::<><><>0<>0<><>::
 ::res://addons/fancy_folder_colors/scene/::1763394738
-color_picker.gd::GDScript::5779402848968368435::1763394738::0::1::::<>Window<>res://addons/fancy_folder_colors/images/icon.svg<>0<>1<><>::
+color_picker.gd::GDScript::5779402848968368435::1763394738::0::1::::<>Window<><>0<>1<><>::
 color_picker.gdshader::Shader::2562890944065707722::1763394738::0::1::::<><><>0<>0<><>::
 color_picker.tscn::PackedScene::5200531188473437385::1763394738::0::1::::<><><>0<>0<><>::uid://colt6ke7lcirr::::res://addons/fancy_folder_colors/scene/color_picker.gd<>uid://bcrqo67nwx4p7::::res://addons/fancy_folder_colors/scene/color_picker.gdshader
 ::res://addons/Hidefolders/::1763394738
@@ -27,12 +27,14 @@ readme.md::TextFile::-1::1763394738::0::1::::<><><>0<>0<><>::
 CharacterPrefab.gd::GDScript::327760011482649445::1763394738::0::1::::CharacterPrefab<>CharacterBody3D<><>0<>0<><>::
 player.gd::GDScript::3311486542638674167::1763394738::0::1::::<>CharacterPrefab<><>0<>0<><>::
 player.tscn::PackedScene::314551746827387128::1763394738::0::1::::<><><>0<>0<><>::uid://bngdx1w3ryx7l::::res://characters/player.gd
+::res://characters/stateMashine/::0
+state_mashine.gd::GDScript::1682822457882467184::1763396544::0::1::::<>Node<><>0<>0<><>::
 ::res://globals/::1763394738
 item_manager.gd::GDScript::8694725262429407557::1763394738::0::1::::<>Node<><>0<>0<><>::
 uid.gd::GDScript::3720901412586523334::1763394738::0::1::::<>Node<><>0<>0<><>::
-::res://items/::1763394738
+::res://items/::1763395907
 item_prefab.gd::GDScript::2218700817606098648::1763394738::0::1::::ItemPrefab<>RigidBody3D<><>0<>0<><>::
 weapon.gd::GDScript::706066463218407807::1763394738::0::1::::Weapon<>ItemPrefab<><>0<>0<><>::
 weapon.tscn::PackedScene::6722221446058504023::1763394738::0::1::::<><><>0<>0<><>::uid://kca2uc4pgkxj::::res://items/weapon.gd
-::res://scenes/::1763395513
-test_scene.tscn::PackedScene::5992188139454621837::1763395513::0::1::::<><><>0<>0<><>::uid://eqmveid2wlee::::res://characters/player.tscn
+::res://scenes/::1763395596
+test_scene.tscn::PackedScene::5992188139454621837::1763395596::0::1::::<><><>0<>0<><>::uid://eqmveid2wlee::::res://characters/player.tscn
