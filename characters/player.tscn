@@ -23,6 +23,11 @@ shape = SubResource("CapsuleShape3D_6p3mc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_6p3mc")
 
+[node name="CamAnchor" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53294945, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CamAnchor"]
+
 [node name="RootStateMachine" type="Node" parent="." node_paths=PackedStringArray("parent")]
 script = ExtResource("2_x0jl3")
 parent = NodePath("..")
@@ -60,6 +65,5 @@ metadata/_custom_type_script = "uid://lhwocdkhwbps"
 
 [node name="BasicMovementComponent" type="Node" parent="RootComponent"]
 script = ExtResource("9_n8jd0")
-is_active = null
 identifier = "BasicMovement"
 metadata/_custom_type_script = "uid://7o6atif7f3eb"

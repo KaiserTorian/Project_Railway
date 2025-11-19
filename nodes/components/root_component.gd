@@ -26,7 +26,13 @@ func _physics_process(delta: float) -> void:
 	for component in self.get_children() as Array[ComponentPrefab]:
 		if component.is_active == true:
 			component.physics_process(delta)
-	
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	for component in self.get_children() as Array[ComponentPrefab]:
+		if component.is_active == true:
+			component.unhandled_input(event)
+
 
 func activate(identifier: String) -> void:
 	for component in self.get_children() as Array[ComponentPrefab]:

@@ -1,0 +1,5 @@
+res://nodes/components/basic_movement_component.gd
+res://characters/player.tscn
+res://characters/player.gd
+res://nodes/components/root_component.gd
+res://nodes/components/component_prefab.gd

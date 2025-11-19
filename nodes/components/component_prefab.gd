@@ -27,6 +27,9 @@ func process(_delta: float) -> void:
 func physics_process(_delta: float) -> void:
 	pass
 
+func unhandled_input(_event: InputEvent) -> void:
+	pass
+
 func on_activate() -> void:
 	pass
 
