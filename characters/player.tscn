@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://eqmveid2wlee"]
+[gd_scene load_steps=12 format=3 uid="uid://eqmveid2wlee"]
 
 [ext_resource type="Script" uid="uid://bngdx1w3ryx7l" path="res://characters/player.gd" id="1_dnjla"]
-[ext_resource type="Script" uid="uid://x8f3tcce3b1y" path="res://characters/state_mashine/state_mashine.gd" id="2_3eadt"]
+[ext_resource type="Script" uid="uid://d2y113xd5ckcw" path="res://nodes/state_machine/root_state_machine.gd" id="2_x0jl3"]
+[ext_resource type="Script" uid="uid://c48y1d8whg2lm" path="res://nodes/state_machine/state_machine.gd" id="3_evndh"]
+[ext_resource type="Script" uid="uid://b34edioxustne" path="res://nodes/state_machine/player_character/idle_state.gd" id="4_h1q25"]
+[ext_resource type="Script" uid="uid://cqmek6tqnkbv1" path="res://nodes/state_machine/player_character/running_state.gd" id="5_j31ep"]
+[ext_resource type="Script" uid="uid://d0vocsbu2mera" path="res://nodes/state_machine/player_character/climbing_state.gd" id="6_6t23p"]
+[ext_resource type="Script" uid="uid://eoejey874c8u" path="res://nodes/state_machine/player_character/falling_state.gd" id="7_n8jd0"]
+[ext_resource type="Script" uid="uid://lhwocdkhwbps" path="res://nodes/components/root_component.gd" id="8_6t23p"]
+[ext_resource type="Script" uid="uid://7o6atif7f3eb" path="res://nodes/components/basic_movement_component.gd" id="9_n8jd0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
 
@@ -16,9 +23,43 @@ shape = SubResource("CapsuleShape3D_6p3mc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_6p3mc")
 
-[node name="StateMashine" type="Node" parent="."]
-script = ExtResource("2_3eadt")
+[node name="RootStateMachine" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("2_x0jl3")
+parent = NodePath("..")
+metadata/_custom_type_script = "uid://d2y113xd5ckcw"
 
-[node name="Walking" type="Node" parent="StateMashine"]
+[node name="MovementSM" type="Node" parent="RootStateMachine" node_paths=PackedStringArray("default_state")]
+script = ExtResource("3_evndh")
+default_state = NodePath("Idle_state")
+metadata/_custom_type_script = "uid://c48y1d8whg2lm"
 
-[node name="Idle" type="Node" parent="StateMashine"]
+[node name="Idle_state" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("4_h1q25")
+identifier = "IdleState"
+metadata/_custom_type_script = "uid://b34edioxustne"
+
+[node name="RunningState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("5_j31ep")
+identifier = "RunningState"
+metadata/_custom_type_script = "uid://cqmek6tqnkbv1"
+
+[node name="ClimbingState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("6_6t23p")
+identifier = "ClimbingState"
+metadata/_custom_type_script = "uid://d0vocsbu2mera"
+
+[node name="FallingState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("7_n8jd0")
+identifier = "FallingState"
+metadata/_custom_type_script = "uid://eoejey874c8u"
+
+[node name="RootComponent" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("8_6t23p")
+parent = NodePath("..")
+metadata/_custom_type_script = "uid://lhwocdkhwbps"
+
+[node name="BasicMovementComponent" type="Node" parent="RootComponent"]
+script = ExtResource("9_n8jd0")
+is_active = null
+identifier = "BasicMovement"
+metadata/_custom_type_script = "uid://7o6atif7f3eb"

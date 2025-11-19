@@ -31,5 +31,6 @@ folder_colors={
 "res://characters/": "red",
 "res://globals/": "orange",
 "res://items/": "yellow",
+"res://nodes/": "blue",
 "res://scenes/": "green"
 }

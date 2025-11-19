@@ -1,4 +1,3 @@
-class_name StateMashine
 extends Node
 
 ## State Mashine
