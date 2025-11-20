@@ -13,7 +13,7 @@ material = SubResource("StandardMaterial3D_a5oyu")
 size = Vector3(20, 0.1, 20)
 
 [sub_resource type="Environment" id="Environment_a5oyu"]
-background_energy_multiplier = 1.75
+background_energy_multiplier = 0.68
 sky_custom_fov = 48.0
 ambient_light_source = 3
 
@@ -53,7 +53,7 @@ transform = Transform3D(0.99853855, 0, 0.05404396, -0.0027464891, 0.99870783, 0.
 environment = SubResource("Environment_a5oyu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.44621345, 0.89492655, 0, -0.89492655, 0.44621345, 0, 6.675596, 6.845074)
+transform = Transform3D(1, 0, 0, 0, 0.44621345, 0.89492655, 0, -0.89492655, 0.44621345, 0, 9.755459, 5.746492)
 
 [node name="Items" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0328803, 0)
