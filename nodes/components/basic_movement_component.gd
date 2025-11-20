@@ -19,7 +19,7 @@ func physics_process(delta: float) -> void:
 
 func unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		temp_mouse_input = Vector2(-event.screen_relative.x * MOUSE_SENSITIVITY,-event.screen_relative.y * MOUSE_SENSITIVITY)
+		temp_mouse_input = Vector2(event.screen_relative.x,event.screen_relative.y)
 		#print(temp_mouse_input)
 
 
@@ -58,13 +58,13 @@ func character_movement(delta: float) ->void:
 
 func cam_movement(delta)->void:
 	
-	mouse_rotation.x += temp_mouse_input.x * delta
-	mouse_rotation.x = clamp(mouse_rotation.x, TILT_UPPER_LIMIT, TILT_UPPER_LIMIT)
-	mouse_rotation.y += temp_mouse_input.y * delta
+	mouse_rotation.x += -temp_mouse_input.x * MOUSE_SENSITIVITY * delta
+	mouse_rotation.y += -temp_mouse_input.y * MOUSE_SENSITIVITY * delta
+	mouse_rotation.y = clamp(mouse_rotation.y, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
 	
 	var player_rotation = Vector3(0.0,mouse_rotation.x,0.0)
 	var camera_rotation = Vector3(mouse_rotation.y,0.0,0.0)
-	print(player_rotation,mouse_rotation.x)
+	
 	cam_controller.transform.basis = Basis.from_euler(camera_rotation)
 	cam_controller.rotation.z = 0.0
 	
