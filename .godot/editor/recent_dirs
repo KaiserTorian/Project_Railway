@@ -1,3 +1,7 @@
-res://nodes/components/
-/home/asbest/work/Godot/Project_Railway/fonts
-res://globals
+res://items/item_components/
+res://items/items/
+/home/asbest/work/Godot/Project_Railway/assets/fonts
+res://items/
+res://
+res://scenes/GUI
+res://scenes

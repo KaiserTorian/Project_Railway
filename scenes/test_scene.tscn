@@ -1,21 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://crmwp0pdxv0dl"]
+[gd_scene load_steps=6 format=3 uid="uid://crmwp0pdxv0dl"]
 
-[ext_resource type="PackedScene" uid="uid://eqmveid2wlee" path="res://characters/player.tscn" id="1_g7g4h"]
+[ext_resource type="Script" uid="uid://dfal78xoae7t0" path="res://scenes/characters_spawn_node.gd" id="1_g7g4h"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_a5oyu"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5oyu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7g4h"]
 albedo_color = Color(0.27399352, 0.27559692, 0.2611281, 1)
 metallic = 0.53
 
 [sub_resource type="BoxMesh" id="BoxMesh_g7g4h"]
-material = SubResource("StandardMaterial3D_a5oyu")
+material = SubResource("StandardMaterial3D_g7g4h")
 size = Vector3(20, 0.1, 20)
-
-[sub_resource type="Environment" id="Environment_a5oyu"]
-background_energy_multiplier = 0.68
-sky_custom_fov = 48.0
-ambient_light_source = 3
 
 [sub_resource type="GDScript" id="GDScript_a5oyu"]
 script/source = "class_name ItemSpawner
@@ -38,7 +33,7 @@ func _process(_delta: float) -> void:
 			ItemManager.item_deleted.emit(self.get_child(0))
 "
 
-[node name="Node3D" type="Node3D"]
+[node name="TestWorld" type="Node3D"]
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
@@ -48,16 +43,13 @@ shape = SubResource("WorldBoundaryShape3D_a5oyu")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 mesh = SubResource("BoxMesh_g7g4h")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.99853855, 0, 0.05404396, -0.0027464891, 0.99870783, 0.050745267, -0.053974126, -0.05081954, 0.9972483, 0, 2.6695423, 4.700091)
-environment = SubResource("Environment_a5oyu")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.44621345, 0.89492655, 0, -0.89492655, 0.44621345, 0, 9.755459, 5.746492)
 
 [node name="Items" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0328803, 0)
 script = SubResource("GDScript_a5oyu")
 
-[node name="Player" parent="." instance=ExtResource("1_g7g4h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4265252, 0)
+[node name="Characters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.913432, 0)
+script = ExtResource("1_g7g4h")

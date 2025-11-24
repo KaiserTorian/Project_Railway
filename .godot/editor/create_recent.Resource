@@ -1,2 +1,3 @@
-BasicMovement
+TestComp
+ItemPrefab
 Resource

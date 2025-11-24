@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://coex1ah3gtr61"]
+
+[ext_resource type="Script" uid="uid://cyrbixr5d3pdg" path="res://scenes/GUI/loading_scene.gd" id="1_1yj0p"]
+
+[node name="LoadingScreen" type="CanvasLayer"]
+layer = 100
+follow_viewport_enabled = true
+script = ExtResource("1_1yj0p")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 5.27

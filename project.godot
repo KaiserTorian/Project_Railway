@@ -11,14 +11,17 @@ config_version=5
 [application]
 
 config/name="Project_Railway"
-run/main_scene="uid://crmwp0pdxv0dl"
+run/main_scene="uid://cfucqcahrugd"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Uid="*res://globals/uid.gd"
-ItemManager="*res://globals/item_manager.gd"
+Uid="*res://scripts/globals/uid.gd"
+ItemManager="*res://scripts/globals/item_manager.gd"
+CharacterManager="*res://scripts/globals/character_manager.gd"
+SceneManager="*res://scripts/globals/scene_manager.gd"
+GameManager="*res://scripts/globals/game_manager.gd"
 
 [editor_plugins]
 
@@ -28,11 +31,11 @@ enabled=PackedStringArray("res://addons/Hidefolders/plugin.cfg", "res://addons/f
 
 folder_colors={
 "res://addons/": "gray",
-"res://characters/": "red",
-"res://globals/": "orange",
-"res://items/": "yellow",
-"res://nodes/": "blue",
-"res://scenes/": "green"
+"res://assets/": "red",
+"res://items/": "orange",
+"res://scenes/": "pink",
+"res://scripts/": "purple",
+"res://scripts/globals/": "orange"
 }
 
 [input]
