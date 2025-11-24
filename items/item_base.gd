@@ -2,12 +2,14 @@ class_name ItemBase
 extends Node3D
 
 ## This is the base of the Item sceen that adds 
-
-var item_prefab: ItemPrefab
+var uid: int
+var prefab: ItemPrefab
 var sprite: Image
-var model: PackedScene
 
 var components: Array[ItemComponents]
+
+@onready var item_mesh: MeshInstance3D = $MeshInstance3D
+
 
 func _ready() -> void:
 	self.update_model()
@@ -17,16 +19,17 @@ func _ready() -> void:
 		component.ready()
 	
 	
-func update_model(new_model: PackedScene = null):
-	if new_model == null:
-		self.model = self.item_prefab.item_model
+func update_model(new_mesh: Mesh = null):
+	if new_mesh == null:
+		print(self)
+		self.item_mesh.mesh = prefab.item_mesh
 	else:
-		self.model = new_model
+		self.item_mesh.mesh = new_mesh
 
 
 func update_sprite(new_sprite: Image = null):
 	if new_sprite == null:
-		self.sprite = self.item_prefab.item_sprite
+		self.sprite = self.prefab.item_sprite
 	else:
 		self.sprite = new_sprite
 

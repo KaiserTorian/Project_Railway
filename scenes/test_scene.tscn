@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://crmwp0pdxv0dl"]
+[gd_scene load_steps=7 format=3 uid="uid://crmwp0pdxv0dl"]
 
 [ext_resource type="Script" uid="uid://dfal78xoae7t0" path="res://scenes/characters_spawn_node.gd" id="1_g7g4h"]
+[ext_resource type="Resource" uid="uid://dcvbeqr7wiyo7" path="res://items/item_prefabs/test_item1.tres" id="1_j8ivh"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_a5oyu"]
 
@@ -17,17 +18,16 @@ script/source = "class_name ItemSpawner
 extends Node3D
 
 # The parent of the spawend item
-@export var parent_node: Node3D 
+@export var item: ItemPrefab
 
 
-# TODO: Fix the random error when spawning an Item
-# TODO: Let it spawn items per signal so we only need one spawner or the spawner node accses an Glabal ItemManager 
-#		that spawnes and deletes the iten we want
-
-
+func _ready() -> void:
+	ItemManager.spawn_item(item)
+	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(\"ui_accept\"):
-		ItemManager.item_spawned.emit(\"res://items/weapon.tscn\",false,self,Vector3(0,0,0))
+		ItemManager.spawn_item(item)
+		print('item spawn')
 	if Input.is_action_just_pressed(\"ui_down\"):
 		if self.get_child_count() > 0:
 			ItemManager.item_deleted.emit(self.get_child(0))
@@ -49,6 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 0.44621345, 0.89492655, 0, -0.89492655, 0.44
 [node name="Items" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0328803, 0)
 script = SubResource("GDScript_a5oyu")
+item = ExtResource("1_j8ivh")
 
 [node name="Characters" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.913432, 0)

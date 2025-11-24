@@ -13,7 +13,7 @@ extends Resource
 
 #FIXME: The string is just a place holder I need a 3D model
 @export_subgroup("model")
-@export var item_model: PackedScene
+@export var item_mesh: Mesh = BoxMesh.new()
 @export var model_offset: Vector3
 
 @export_subgroup("sprite")

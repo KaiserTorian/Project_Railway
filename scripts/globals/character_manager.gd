@@ -1,13 +1,14 @@
 extends Node3D
 
-signal charcter_spawned(character: CharacterManager, is_player:bool)
-signal charcter_despawned(is_player:bool)
-
 var all_characters: Dictionary[int,CharacterPrefab] = {}
 var all_players: Dictionary[int,CharacterPrefab] = {}
 
-
-func spawn_character(scene_path: String, spawn_position: Vector3, spawn_rotation: Vector3, is_player: bool = false, _parent: Node3D = self):
+# FIXME: when already a player exists delete the old one or teleport to spawn pos
+func spawn_character(scene_path: String,
+		spawn_position: Vector3,
+		spawn_rotation: Vector3,
+		is_player: bool = false,
+		parent: Node3D = null):
 	
 	if is_player and get_viewport().get_camera_3d() != null:
 		return
@@ -15,20 +16,22 @@ func spawn_character(scene_path: String, spawn_position: Vector3, spawn_rotation
 	var character: PackedScene = ResourceLoader.load(scene_path)
 	var character_instance: CharacterPrefab = character.instantiate()
 	
-	self.add_child(character_instance,true)
-	
 	var uid = Uid.get_new_id(character_instance)
-	
+	self.all_characters[uid] = character_instance
+	if is_player:
+		self.all_players[uid] = character_instance
+		
 	character_instance.character_uid = uid
 	character_instance.is_player = is_player
+	
+	if parent == null:
+		self.add_child(character_instance,true)
+	else:
+		parent.add_child(character_instance,true)
+	
 	character_instance.global_position = spawn_position
 	character_instance.global_rotation = spawn_rotation
 	
-	all_characters[uid] = character_instance
-	if is_player:
-		all_players[uid] = character_instance
-		
-	charcter_spawned.emit(character_instance,is_player)
 
 func despawn_character(character: CharacterPrefab):
 	if character == null:
@@ -41,8 +44,7 @@ func despawn_character(character: CharacterPrefab):
 			all_players.erase(character.item_uid)
 	
 	character.queue_free()
-	
-	charcter_despawned.emit(is_player)
+
 
 func despawn_all_characters():
 	for index in all_characters:

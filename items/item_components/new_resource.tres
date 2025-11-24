@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_x8oyi")
+test_var1 = 234234
 component_description = "test_comp,test_comp"
 metadata/_custom_type_script = "uid://dve71emj27cqi"
