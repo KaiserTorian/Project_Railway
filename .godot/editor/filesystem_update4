@@ -1,7 +1,0 @@
-res://scenes/characters/human.tscn
-res://items/item_prefab.gd
-res://items/items/test_item1.tres
-res://items/item_components.gd
-res://items/item_components/test_comp.gd
-res://items/item_components/new_resource.tres
-res://items/item_base.gd

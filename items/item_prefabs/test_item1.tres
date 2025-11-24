@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemPrefab" load_steps=5 format=3 uid="uid://dcvbeqr7wiyo7"]
+
+[ext_resource type="Script" uid="uid://henk1sksno5l" path="res://items/item_prefabs/item_prefab.gd" id="1_cu8xr"]
+[ext_resource type="Script" uid="uid://5s6gtr4g8wph" path="res://items/item_components/item_components.gd" id="1_d8nbd"]
+[ext_resource type="Script" uid="uid://dve71emj27cqi" path="res://items/item_components/test_comp.gd" id="2_d8nbd"]
+
+[sub_resource type="Resource" id="Resource_5qyq1"]
+script = ExtResource("2_d8nbd")
+metadata/_custom_type_script = "uid://dve71emj27cqi"
+
+[resource]
+script = ExtResource("1_cu8xr")
+components = Array[ExtResource("1_d8nbd")]([SubResource("Resource_5qyq1")])
+metadata/_custom_type_script = "uid://henk1sksno5l"
