@@ -4,7 +4,7 @@ extends Node
 
 
 func _on_start_pressed() -> void:
-	SceneManager.change_scene("res://scenes/test_scene.tscn")
+	SceneManager.change_scene("res://scenes/world/test_scene.tscn")
 	#print("start")
 
 

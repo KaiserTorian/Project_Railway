@@ -1,7 +1,7 @@
 extends Node3D
 
 
-const BASE_ITEM_SCENE: PackedScene = preload("res://items/base_item.tscn")
+const BASE_ITEM_SCENE: PackedScene = preload("res://scenes/items-misc/base_item.tscn")
 var all_items:Dictionary[int,ItemBase] = {}
  
 

@@ -31,11 +31,10 @@ enabled=PackedStringArray("res://addons/Hidefolders/plugin.cfg", "res://addons/f
 
 folder_colors={
 "res://addons/": "gray",
-"res://assets/": "red",
-"res://items/": "orange",
-"res://scenes/": "pink",
-"res://scripts/": "purple",
-"res://scripts/globals/": "orange"
+"res://assets/": "yellow",
+"res://resources/": "red",
+"res://scenes/": "green",
+"res://scripts/": "purple"
 }
 
 [input]

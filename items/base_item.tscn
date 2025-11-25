@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtu6hqw1jucvy"]
-
-[ext_resource type="Script" uid="uid://jdnrne68ga6y" path="res://items/item_base.gd" id="1_m53hc"]
-
-[node name="Item" type="Node3D"]
-script = ExtResource("1_m53hc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]

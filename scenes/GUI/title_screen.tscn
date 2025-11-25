@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfucqcahrugd"]
+[gd_scene load_steps=2 format=3 uid="uid://cfucqcahrugd"]
 
 [ext_resource type="Script" uid="uid://b5el4vap568s0" path="res://scenes/GUI/title_screen.gd" id="1_tk0hf"]
-[ext_resource type="Script" uid="uid://bl1df5vxl0erl" path="res://scenes/GUI/button.gd" id="2_e0n31"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -41,8 +40,6 @@ text = "Exit Game"
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Spawn Test"
-script = ExtResource("2_e0n31")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

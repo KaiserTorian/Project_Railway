@@ -7,8 +7,7 @@
 [ext_resource type="Script" uid="uid://cqmek6tqnkbv1" path="res://scripts/state_machine/player_character/running_state.gd" id="5_j31ep"]
 [ext_resource type="Script" uid="uid://d0vocsbu2mera" path="res://scripts/state_machine/player_character/climbing_state.gd" id="6_6t23p"]
 [ext_resource type="Script" uid="uid://eoejey874c8u" path="res://scripts/state_machine/player_character/falling_state.gd" id="7_n8jd0"]
-[ext_resource type="Script" uid="uid://lhwocdkhwbps" path="res://scripts/components/root_component.gd" id="8_6t23p"]
-[ext_resource type="Script" uid="uid://7o6atif7f3eb" path="res://scripts/components/basic_movement_component.gd" id="9_n8jd0"]
+[ext_resource type="Script" uid="uid://lhwocdkhwbps" path="res://scripts/resource_scripts/char_comps/root_component.gd" id="8_6t23p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
 
@@ -16,6 +15,12 @@
 
 [sub_resource type="Environment" id="Environment_n8jd0"]
 background_energy_multiplier = 1.1
+
+[sub_resource type="GDScript" id="GDScript_tk7ed"]
+script/source = "class_name BasicMovementComponent
+extends ComponentPrefab
+
+"
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_dnjla")
@@ -69,8 +74,7 @@ script = ExtResource("8_6t23p")
 parent = NodePath("..")
 metadata/_custom_type_script = "uid://lhwocdkhwbps"
 
-[node name="BasicMovementComponent" type="Node" parent="RootComponent" node_paths=PackedStringArray("cam_controller")]
-script = ExtResource("9_n8jd0")
-cam_controller = NodePath("../../CameraController")
+[node name="BasicMovementComponent" type="Node" parent="RootComponent"]
+script = SubResource("GDScript_tk7ed")
 identifier = "BasicMovement"
 metadata/_custom_type_script = "uid://7o6atif7f3eb"

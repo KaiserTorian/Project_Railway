@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TestComp" load_steps=2 format=3 uid="uid://xsfdacqfn4wq"]
 
-[ext_resource type="Script" uid="uid://dve71emj27cqi" path="res://items/item_components/test_comp.gd" id="1_x8oyi"]
+[ext_resource type="Script" uid="uid://dve71emj27cqi" path="res://scripts/resource_scripts/items_comps/test_comp.gd" id="1_x8oyi"]
 
 [resource]
 script = ExtResource("1_x8oyi")

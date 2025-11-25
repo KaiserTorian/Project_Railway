@@ -1,3 +1,5 @@
+CollisionShape3D
+RigidBody3D
 Node
 MeshInstance3D
 Button
@@ -11,4 +13,3 @@ AspectRatioContainer
 Node3D
 Camera3D
 BasicMovementComponent
-RootComponent

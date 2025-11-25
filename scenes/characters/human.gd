@@ -1,2 +1,2 @@
-class_name Player
+class_name Human
 extends CharacterPrefab

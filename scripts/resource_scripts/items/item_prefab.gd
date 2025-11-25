@@ -9,7 +9,7 @@ extends Resource
 @export var item_value: int
 @export var max_stacksize: int = 1
  
-@export var components:Array[ItemComponents]
+@export var components:Array[ComponentPrefab]
 
 #FIXME: The string is just a place holder I need a 3D model
 @export_subgroup("model")

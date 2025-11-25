@@ -1,8 +1,1 @@
-res://items/base_item.tscn
-res://items/item_base.gd
-res://scripts/globals/item_manager.gd
-res://items/item_prefabs/item_prefab.gd
-res://scripts/globals/character_manager.gd
-res://scenes/test_scene.tscn
-res://items/item_prefabs/test_item1.tres
-res://items/item_components/new_resource.tres
+res://scripts/resource_scripts/char_comps/simple_player_controller.gd

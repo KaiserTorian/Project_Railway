@@ -5,7 +5,6 @@ extends ItemComponents
 @export var test_var2: String
 
 
-
-func process(_delta: float):
+func process(_delta: float, parent: Node3D):
+	print(parent)
 	print(test_var1)
-	

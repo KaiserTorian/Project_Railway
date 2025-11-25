@@ -6,7 +6,7 @@ var uid: int
 var prefab: ItemPrefab
 var sprite: Image
 
-var components: Array[ItemComponents]
+var components: Array[ComponentPrefab]
 
 @onready var item_mesh: MeshInstance3D = $MeshInstance3D
 
@@ -14,9 +14,7 @@ var components: Array[ItemComponents]
 func _ready() -> void:
 	self.update_model()
 	self.update_sprite()
-	
-	for component in self.components:
-		component.ready()
+
 	
 	
 func update_model(new_mesh: Mesh = null):
@@ -30,15 +28,15 @@ func update_model(new_mesh: Mesh = null):
 func update_sprite(new_sprite: Image = null):
 	if new_sprite == null:
 		self.sprite = self.prefab.item_sprite
-	else:
+	else	:
 		self.sprite = new_sprite
 
 
 func _process(delta: float) -> void:
 	for component in self.components:
-		component.process(delta)
+		component.process(delta, self)
 
 
 func _physics_process(delta: float) -> void:
 	for component in self.components:
-		component.physics_process(delta)
+		component.physics_process(delta, self)
