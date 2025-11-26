@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InvSlot" load_steps=2 format=3 uid="uid://cgicowb4f2rj3"]
+
+[ext_resource type="Script" uid="uid://dufa3lgfwvyti" path="res://scripts/resource_scripts/misc/inv_slot.gd" id="1_tsnfr"]
+
+[resource]
+script = ExtResource("1_tsnfr")
+slot_size = 50
+metadata/_custom_type_script = "uid://dufa3lgfwvyti"

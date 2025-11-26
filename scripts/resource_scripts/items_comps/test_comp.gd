@@ -1,5 +1,5 @@
 class_name TestComp
-extends ItemComponents
+extends ComponentPrefab
 
 @export var test_var1: int
 @export var test_var2: String

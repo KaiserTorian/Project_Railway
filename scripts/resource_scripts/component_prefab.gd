@@ -8,7 +8,7 @@ extends Resource
 
 func self_check() -> void:
 	if identifier == null:
-		push_error("identifier in ", self, " is null")
+		print("identifier in ", self, " is null")
 		return
 
 func ready(_parent: Node3D):

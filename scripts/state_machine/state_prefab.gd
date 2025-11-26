@@ -36,5 +36,6 @@ func physics_process(_delta: float) -> void:
 func enter_state() -> void:
 	pass
 
+
 func exit_state(_new_state: StatePrefab) -> void:
 	pass

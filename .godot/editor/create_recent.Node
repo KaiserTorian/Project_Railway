@@ -1,3 +1,5 @@
+Human
+RootComponent
 CollisionShape3D
 RigidBody3D
 Node
@@ -10,6 +12,3 @@ CanvasLayer
 HSeparator
 VBoxContainer
 AspectRatioContainer
-Node3D
-Camera3D
-BasicMovementComponent

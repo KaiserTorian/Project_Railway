@@ -1,3 +1,6 @@
+InvSlot
+Inventory
+SimplePlayerController
 TestComp
 ItemPrefab
 Resource

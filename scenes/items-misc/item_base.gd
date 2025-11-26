@@ -8,6 +8,9 @@ var sprite: Image
 
 var components: Array[ComponentPrefab]
 
+var in_inventory: bool
+var inventory_slot: InvSlot
+
 @onready var item_mesh: MeshInstance3D = $MeshInstance3D
 
 

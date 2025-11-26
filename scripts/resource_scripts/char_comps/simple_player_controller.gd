@@ -2,21 +2,18 @@ class_name SimplePlayerController
 extends ComponentPrefab
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-const MOUSE_SENSITIVITY = 0.5
-const TILT_LOWER_LIMIT := deg_to_rad(-90.0)
-const TILT_UPPER_LIMIT := deg_to_rad(90.0)
-
-#FIXME 
-@export var cam_controller: Node3D
-
+@export var speed = 5.0
+@export var jump_velocity = 4.5
+@export var mouse_sensitivity = 0.5
+@export var tilt_lower_limit := deg_to_rad(-90.0)
+@export var tilt_upper_limit := deg_to_rad(90.0)
 
 var temp_mouse_input: Vector2
 var mouse_rotation := Vector2(0.0,0.0)
 
+
 func physics_process(delta: float, owner: Node3D) -> void:
-	character_movement(delta,owner)
+	character_movement(delta, owner)
 	cam_movement(delta, owner)
 
 
@@ -35,8 +32,7 @@ func _input(event, _owner:Node3D):
 
 
 func character_movement(delta: float, owner: Node3D) -> void:
-	
-	if not owner == Human:
+	if not owner is Human:
 		return
 		
 	# Add the gravity.
@@ -45,18 +41,18 @@ func character_movement(delta: float, owner: Node3D) -> void:
 	
 	# Jumpingda
 	if Input.is_action_just_pressed("cc_jump") and owner.is_on_floor():
-		owner.velocity.y = JUMP_VELOCITY
+		owner.velocity.y = jump_velocity
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("cc_left", "cc_right", "cc_forward", "cc_backward")
 	var direction := (owner.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		owner.velocity.x = direction.x * SPEED
-		owner.velocity.z = direction.z * SPEED
+		owner.velocity.x = direction.x * speed
+		owner.velocity.z = direction.z * speed
 	else:
-		owner.velocity.x = move_toward(owner.velocity.x, 0, SPEED)
-		owner.velocity.z = move_toward(owner.velocity.z, 0, SPEED)
+		owner.velocity.x = move_toward(owner.velocity.x, 0, speed)
+		owner.velocity.z = move_toward(owner.velocity.z, 0, speed)
 
 	owner.move_and_slide()
 	pass
@@ -64,16 +60,23 @@ func character_movement(delta: float, owner: Node3D) -> void:
 
 
 func cam_movement(delta: float,owner: Node3D)->void:
+	if not owner is Human:
+		print("TEst 1")
+		return
 	
-	mouse_rotation.x += -temp_mouse_input.x * MOUSE_SENSITIVITY * delta
-	mouse_rotation.y += -temp_mouse_input.y * MOUSE_SENSITIVITY * delta
-	mouse_rotation.y = clamp(mouse_rotation.y, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
+	if owner.cam_controller == null:
+		print("TEst 2")
+		return
+	
+	mouse_rotation.x += -temp_mouse_input.x * mouse_sensitivity * delta
+	mouse_rotation.y += -temp_mouse_input.y * mouse_sensitivity * delta
+	mouse_rotation.y = clamp(mouse_rotation.y, tilt_lower_limit, tilt_upper_limit)
 	
 	var player_rotation = Vector3(0.0,mouse_rotation.x,0.0)
 	var camera_rotation = Vector3(mouse_rotation.y,0.0,0.0)
 	
-	cam_controller.transform.basis = Basis.from_euler(camera_rotation)
-	cam_controller.rotation.z = 0.0
+	owner.cam_controller.transform.basis = Basis.from_euler(camera_rotation)
+	owner.cam_controller.rotation.z = 0.0
 	
 	owner.global_transform.basis = Basis.from_euler(player_rotation)
 	

@@ -3,8 +3,7 @@ extends Node
 
 
 @export var parent: Node3D
-
-var components: Array[ComponentPrefab] = []
+@export var components: Array[ComponentPrefab] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,12 +20,12 @@ func _process(delta: float) -> void:
 
 func  _physics_process(delta: float) -> void:
 	for component in self.components:
-		component.process(delta, parent)
+		component.physics_process(delta, parent)
 
 
 func _input(event: InputEvent) -> void:
 	for component in self.components:
-		component._input(event, parent)
+		component.input(event, parent)
 
 
 func _unhandled_input(event: InputEvent) -> void:
