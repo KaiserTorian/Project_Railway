@@ -1,13 +1,21 @@
 class_name Inventory
 extends ComponentPrefab
 
-@export var default_slot:InvSlot
+@export var default_slot: InvSlot = preload("res://resources/misc/default_inv_slot.tres")
 @export var slots: Array[InvSlot]
 
+
+func ready(owner:Node3D):
+	setup_inv(owner)
+	generate_gui(owner)
+
+# The basic setup after the Inventory is generated
 func setup_inv(owner: Node3D):
-	for slot in slots:
-		if slot == null:
-			slot = default_slot.new()
+	for index in self.slots.size():
+		if slots[index] == null:
+			print(slots[index])
+			slots[index] = default_slot.duplicate(true)
+			
 	
 func generate_gui(owner: Node3D):
 	pass

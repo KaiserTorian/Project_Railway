@@ -1,0 +1,9 @@
+res://scenes/characters/human.tscn
+res://scripts/resource_scripts/misc/inventory.gd
+res://scripts/resource_scripts/component_prefab.gd
+res://resources/misc/default_inv_slot.tres
+res://scripts/resource_scripts/misc/inv_slot.gd
+res://scenes/items-misc/base_item.tscn
+res://scenes/items-misc/item_base.gd
+res://scripts/globals/item_manager.gd
+res://scenes/world/test_scene.tscn

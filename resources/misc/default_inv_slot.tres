@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_tsnfr")
 slot_size = 50
+identifier = "default_inv_slot"
 metadata/_custom_type_script = "uid://dufa3lgfwvyti"

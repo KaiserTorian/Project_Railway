@@ -27,10 +27,16 @@ extends Node3D
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(\"ui_up\"):
 		ItemManager.spawn_item(item,self.global_position)
-		print('item spawn')
+		
 	if Input.is_action_just_pressed(\"ui_down\"):
 		if self.get_child_count() > 0:
 			ItemManager.item_deleted.emit(self.get_child(0))
+	
+	if Input.is_action_just_pressed(\"ui_right\"):
+		# spawn in player in random slot
+		ItemManager.spawn_item(item,self.global_positio,Vector3(0,0,0),)
+		
+	
 "
 
 [node name="TestWorld" type="Node3D"]

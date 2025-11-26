@@ -1,5 +1,5 @@
 class_name ItemBase
-extends Node3D
+extends RigidBody3D
 
 ## This is the base of the Item sceen that adds 
 var uid: int
@@ -8,11 +8,10 @@ var sprite: Image
 
 var components: Array[ComponentPrefab]
 
-var in_inventory: bool
 var inventory_slot: InvSlot
 
 @onready var item_mesh: MeshInstance3D = $MeshInstance3D
-
+@onready var item_collition: CollisionShape3D = $CollisionShape3D
 
 func _ready() -> void:
 	self.update_model()
@@ -31,9 +30,22 @@ func update_model(new_mesh: Mesh = null):
 func update_sprite(new_sprite: Image = null):
 	if new_sprite == null:
 		self.sprite = self.prefab.item_sprite
-	else	:
+	else:
 		self.sprite = new_sprite
 
+func set_inventory(slot: InvSlot = null):
+	if slot == null:
+		self.inventory_slot = null
+		
+		self.visible = false
+		self.sleeping = true
+		self.item_collition.disabled = false
+	else:
+		self.inventory_slot = slot
+		
+		self.visible = true
+		self.sleeping = false
+		self.item_collition.disabled = true
 
 func _process(delta: float) -> void:
 	for component in self.components:

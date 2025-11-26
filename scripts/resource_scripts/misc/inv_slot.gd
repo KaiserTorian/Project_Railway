@@ -1,5 +1,5 @@
 class_name InvSlot
-extends Resource
+extends ComponentPrefab
 
 @export var slot_size: int
 
