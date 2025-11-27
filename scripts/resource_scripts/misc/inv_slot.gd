@@ -7,3 +7,4 @@ extends ComponentPrefab
 var owner_inventory: Inventory
 var item_count: int
 var items: Array[ItemBase]
+var item_type: String
