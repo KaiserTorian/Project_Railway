@@ -8,6 +8,7 @@ var all_items:Dictionary[int,ItemBase] = {}
 func spawn_item(item_prefab: ItemPrefab,
 		spawn_position: Vector3 = Vector3(0,0,0),
 		spawn_rotation: Vector3 = Vector3(0,0,0),
+		inventory_owner: Node3D = null,
 		inventory_slot: InvSlot = null,
 		parent: Node3D = self):
 	
@@ -32,15 +33,18 @@ func spawn_item(item_prefab: ItemPrefab,
 	item_instance.global_position = spawn_position
 	item_instance.global_rotation = spawn_rotation
 	
-	# Das ist dumm, sollte der InvManager managen da viele tests gemacht werden müssen.
-	item_instance.set_inventory(inventory_slot) 
+	# after the item was spawend the target inv should pick it up
+	if not inventory_slot == null:
+		inventory_slot.owner_inventory.pickup(item_instance,inventory_owner,null)
 		
 
 
 func despawn_item(item: ItemBase):
 	if item == null:
 		return
-		
+	
+	if not item.inventory_slot == null:
+		item.inventory_slot.owner_inventory.drop(item, self, Vector3(0,0,0))
 	if not item.uid == null:
 		self.all_items.erase(item.uid)
 	

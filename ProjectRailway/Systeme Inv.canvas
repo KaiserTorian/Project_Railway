@@ -3,11 +3,11 @@
 		{"id":"73124eb6b4a4e209","type":"group","x":-600,"y":540,"width":595,"height":180,"color":"5","label":"Item Manager Node"},
 		{"id":"375014d75f6c3ce7","type":"text","text":"Base_Item\n","x":-275,"y":560,"width":250,"height":60,"color":"5"},
 		{"id":"174fdcb882063e24","type":"text","text":"Base_Item\n","x":-580,"y":560,"width":250,"height":60,"color":"5"},
-		{"id":"9f9fdd73af5aa90e","type":"text","text":"Player/Item","x":-420,"y":-390,"width":250,"height":60,"color":"5"},
-		{"id":"87c54bb950b3a349","type":"text","text":"Inventory\n\nJust references to the items","x":-420,"y":220,"width":250,"height":140,"color":"5"},
-		{"id":"6e071dfda1ed2744","type":"text","text":"Item Iteraction\n\nItem Logic\nItem Pickup/drop\nItem Movement in Inv","x":-72,"y":-80,"width":325,"height":180,"color":"2"},
-		{"id":"ee2e8475a6f208f6","type":"text","text":"Components","x":-275,"y":-238,"width":250,"height":60,"color":"5"},
-		{"id":"6a09136d29b0bfb1","type":"text","text":"Blau = Node\nOrange = resource\nGruen = Code referenz ","x":-1060,"y":-360,"width":327,"height":122}
+		{"id":"6a09136d29b0bfb1","type":"text","text":"Blau = Node\nOrange = resource\nGruen = Code referenz ","x":-840,"y":-112,"width":327,"height":122},
+		{"id":"87c54bb950b3a349","type":"text","text":"Inventory\n\nJust references to the items","x":-420,"y":240,"width":250,"height":140,"color":"5"},
+		{"id":"6e071dfda1ed2744","type":"text","text":"Item Iteraction\n\nItem Logic\nItem Pickup/drop\nItem Movement in Inv","x":-80,"y":-51,"width":325,"height":180,"color":"2"},
+		{"id":"ee2e8475a6f208f6","type":"text","text":"Components","x":-275,"y":-172,"width":250,"height":60,"color":"5"},
+		{"id":"9f9fdd73af5aa90e","type":"text","text":"Player/Item","x":-420,"y":-300,"width":250,"height":60,"color":"5"}
 	],
 	"edges":[
 		{"id":"7da4e3b0e21de90d","fromNode":"9f9fdd73af5aa90e","fromSide":"bottom","toNode":"ee2e8475a6f208f6","toSide":"top"},

@@ -8,6 +8,7 @@ extends ComponentPrefab
 func ready(owner:Node3D):
 	setup_inv(owner)
 	generate_gui(owner)
+	
 
 # The basic setup after the Inventory is generated
 func setup_inv(owner: Node3D):
@@ -15,25 +16,48 @@ func setup_inv(owner: Node3D):
 		if slots[index] == null:
 			slots[index] = default_slot.duplicate(true)
 			
+
 	
 func generate_gui(owner: Node3D):
 	pass
 
-func pickup(item: ItemBase,owner: Node3D):
+
+func pickup(item: ItemBase, picker: Node3D, input_slot: InvSlot = null):
 	if not item.inventory_slot == null:
 		return
 	
-	if not self._can_pickup_item(item,owner):
+	if not self._can_pickup_item(item):
 		return
 	
-func drop(owner: Node3D):
-	pass
+	if input_slot == null:
+		input_slot = self._find_first_slot(item)
+	
+	item.inventory_slot = input_slot
+	
+	item.visible = false
+	item.sleeping = true
+	item.item_collition.disabled = false
+
+
+func drop(item: ItemBase, picker: Node3D, drop_pos: Vector3) -> bool:
+	if item.inventory_slot == null:
+		return false
+			
+	item.global_position = drop_pos
+	
+	item.inventory_slot = null
+	item.sleeping = false
+	item.visible = true
+	item.item_collition.disabled = true
+	
+	return true
+	
 
 func move(owner: Node3D):
 	pass
 
 
-func _can_pickup_item(item: ItemBase, _owner: Node3D) -> bool:
+func _can_pickup_item(item: ItemBase) -> bool:
 	var item_type: String = item.prefab.identifier
 	# Ist ein freier stack im inv?
 	for slot in self.slots:
@@ -47,8 +71,8 @@ func _can_pickup_item(item: ItemBase, _owner: Node3D) -> bool:
 			
 	return false
 	
-
-func _find_first_slot(item: ItemBase, _owner: Node3D) -> InvSlot:
+# FIXME: I already have this function wy a second time?
+func _find_first_slot(item: ItemBase) -> InvSlot:
 	var item_type: String = item.prefab.identifier
 	# Ist ein freier stack im inv?
 	for slot in self.slots:
