@@ -10,7 +10,7 @@ func _ready() -> void:
 	for component in self.components:
 		component.self_check()
 		component.ready(parent)
-
+		print(find_components(Inventory,true))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -31,3 +31,10 @@ func _input(event: InputEvent) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	for component in self.components:
 		component.unhandled_input(event, parent)
+	
+
+func find_components(component_type, first_component:bool) -> ComponentPrefab:
+	for i in self.components:
+		if is_instance_of(i,component_type):
+			return i
+	return null
