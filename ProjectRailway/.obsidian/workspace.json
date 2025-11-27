@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "6aafc816178db421",
+    "type": "split",
+    "children": [
+      {
+        "id": "f86ec8c95133d840",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fcbb4027332cbc68",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Systeme Inv.canvas",
+                "viewState": {
+                  "x": -51.884615384615415,
+                  "y": -172.35884875269733,
+                  "zoom": -0.3439544012173613
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Systeme Inv"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3c27af6558e90cd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fa8ef9731f84eed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aad6e886214087d8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dateiexplorer"
+            }
+          },
+          {
+            "id": "7468422531d5e668",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b71e3e00ecc296da",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Lesezeichen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 244.5
+  },
+  "right": {
+    "id": "de477c4eb729c232",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3aa69186372d6c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad5fe19933654375",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Global Managers.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rückverweise für Global Managers"
+            }
+          },
+          {
+            "id": "d0275f8b33924079",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Global Managers.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links von Global Managers öffnen"
+            }
+          },
+          {
+            "id": "7ba20ce3d860acab",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0a9a9f0bd8370941",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "!Project Railway.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of !Project Railway"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graph-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false,
+      "bases:Create new base": false,
+      "simple-sketch:Simple Sketch": false
+    }
+  },
+  "active": "fcbb4027332cbc68",
+  "lastOpenFiles": [
+    "Systeme Items.canvas",
+    "Systeme Inv.canvas",
+    "Mechaniken.md",
+    "Map Generation.md",
+    "!Project Railway.md",
+    "Items.md",
+    "Global Managers.canvas",
+    "GUIs.canvas",
+    "File System.canvas",
+    "Char Komponente.canvas",
+    "Züge.md",
+    "Waffen.md",
+    "Items/Misc.md",
+    "Items/Waffen.md",
+    "Unbenannt",
+    "File System.md",
+    "simple_sketch-11-21-2025_9-17-57_PM.jpg.jpg",
+    "GUI",
+    "2025-11-21.md",
+    "Spawner.md",
+    "Items",
+    "Comps FSMs.md",
+    "Unbenannt.base",
+    "Base Mechanics.md",
+    "Character.md",
+    "Lokomotiven.md",
+    "Waggons.md",
+    "Was ist ProjectTrain.md",
+    "Unbenannt 2.canvas",
+    "Was wollen wir eigentlich?.md",
+    "Player Management system.md"
+  ]
+}

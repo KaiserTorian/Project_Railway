@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"f190c00c16528182","type":"group","x":-780,"y":-920,"width":1820,"height":560,"color":"2","label":"Game Manager"},
+		{"id":"90f51df410d6ef84","type":"group","x":-780,"y":-240,"width":580,"height":740,"color":"6","label":"Item Manger"},
+		{"id":"269e807c27d7520a","type":"group","x":-160,"y":-240,"width":580,"height":740,"color":"5","label":"Character Manager"},
+		{"id":"1b4bdaeb6f0fb1e0","type":"group","x":460,"y":-240,"width":580,"height":740,"color":"4","label":"Scene Manager"},
+		{"id":"ce04e9c28cc37959","type":"text","text":"Spawning\n","x":-740,"y":-180,"width":250,"height":60},
+		{"id":"52ce88fda8513560","type":"text","text":"Globals\n- game_paused\n- Ein paar fenster daten \n\n","x":-740,"y":-860,"width":250,"height":460},
+		{"id":"61bcb2e538e986b7","type":"text","text":"_ready():\n\n","x":-420,"y":-860,"width":250,"height":60},
+		{"id":"aef3d976e185025e","type":"text","text":"TitleScreen():\n- Wenn das erste mal oeffnen dann opening vid?\n- Wechselt zum TitleScreen mit hilfe vom Scene manager","x":-440,"y":-740,"width":355,"height":240},
+		{"id":"b60f257b73a5efb2","type":"text","text":"Despawning\n","x":-740,"y":-60,"width":250,"height":60},
+		{"id":"135d330b73b7ca19","type":"text","text":"globals\n- active_scene\n- loading_progress\n- target_scene_path","x":484,"y":-200,"width":250,"height":140},
+		{"id":"09d5d461ea153e47","type":"text","text":"signals\n- loading_progress_updated \n- loading_finished","x":760,"y":-200,"width":250,"height":140},
+		{"id":"3478bfd2c48ada82","type":"text","text":"MapChanging(nextScene):\n1. start ResourceLoader.load_threaded_request\n2. show the GUI\n3. activate set_process()\n","x":484,"y":-20,"width":384,"height":260},
+		{"id":"776e4390f10f337a","x":540,"y":308,"width":250,"height":60,"type":"text","text":"_ready()\n- update the GUI"},
+		{"id":"2588f25e84e4a500","x":-120,"y":-200,"width":250,"height":140,"type":"text","text":"var\n- all_charcters"},
+		{"id":"720455b00b3a4c14","type":"text","text":"spawn_character(parent_node:Node3D, spawn_pos:Vec3, spawn_direction:Vec3, is_player:bool):\n\n\n","x":-120,"y":-20,"width":260,"height":180},
+		{"id":"b29d7a7d525115a5","x":-120,"y":400,"width":290,"height":50,"type":"text","text":"get_character_by_uid()"},
+		{"id":"453652fbbaf1343d","x":140,"y":-200,"width":240,"height":140,"type":"text","text":"siganls\n- charcter_spawned\n- character_despawned"},
+		{"id":"dd7234c40fe03f4f","type":"text","text":"despawning_character(character:Node3D)\n","x":-120,"y":200,"width":380,"height":168}
+	],
+	"edges":[
+		{"id":"403c2dd30f531980","fromNode":"61bcb2e538e986b7","fromSide":"bottom","toNode":"aef3d976e185025e","toSide":"top"}
+	]
+}

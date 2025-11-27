@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"d92d5a62c4021f9b","type":"group","x":-2300,"y":-1240,"width":794,"height":381,"color":"6","label":"Scene"},
+		{"id":"053d83ebb3d4e9cc","type":"group","x":-2300,"y":-1940,"width":794,"height":300,"color":"1","label":"Prefab for the Resources"},
+		{"id":"024026cee46825a1","type":"group","x":-2300,"y":-1599,"width":794,"height":260,"color":"4","label":"Items prefabs"},
+		{"id":"ba2faabac7dbd5f6","type":"group","x":-1366,"y":-1839,"width":340,"height":240,"color":"2","label":"components"},
+		{"id":"be0fe91d0f5139e1","type":"text","text":"weapon.tres\n\nidentifier = String\nvalue = int\ninvIcon = png\nmodel = Weapon","x":-2246,"y":-1559,"width":250,"height":180},
+		{"id":"32715913609edeb9","type":"text","text":"Item_prefab.gd\n\nIt defines the base things the .tres will save (Item Data). ","x":-2056,"y":-1920,"width":270,"height":200},
+		{"id":"03e8cca18a479f3f","type":"text","text":"test_item.tres\n\nidentifier = String\nvalue = int\ninvIcon = png\nmodel = food_item","x":-1806,"y":-1559,"width":250,"height":180},
+		{"id":"9482e53e4ef95e28","type":"text","text":"item_base.gd (scene)\n1. Creates a 3D scene with the 3D Model\n2. add the components\n3. copy all vars in the scene. Because of the item condition or other dynamic stuff. ","x":-2106,"y":-1160,"width":300,"height":281},
+		{"id":"fe0ac0d2e12ccc92","type":"text","text":"shootable.tres","x":-1346,"y":-1820,"width":250,"height":60},
+		{"id":"1098e975158cab5a","type":"text","text":"food.tres","x":-1346,"y":-1700,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"89f52c5b522267ab","fromNode":"32715913609edeb9","fromSide":"bottom","toNode":"03e8cca18a479f3f","toSide":"top"},
+		{"id":"f1a1d7a4073378f6","fromNode":"03e8cca18a479f3f","fromSide":"bottom","toNode":"9482e53e4ef95e28","toSide":"top"},
+		{"id":"60dbc75d8a8d4f9d","fromNode":"32715913609edeb9","fromSide":"bottom","toNode":"be0fe91d0f5139e1","toSide":"top"},
+		{"id":"404a2a993c4841f1","fromNode":"be0fe91d0f5139e1","fromSide":"bottom","toNode":"9482e53e4ef95e28","toSide":"top"},
+		{"id":"5dfa2e6a3d301aca","fromNode":"fe0ac0d2e12ccc92","fromSide":"bottom","toNode":"be0fe91d0f5139e1","toSide":"right"},
+		{"id":"958810b8ab1acdbc","fromNode":"1098e975158cab5a","fromSide":"left","toNode":"03e8cca18a479f3f","toSide":"right"}
+	]
+}

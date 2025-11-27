@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"b36986d8ff64eb78","type":"group","x":-960,"y":-480,"width":1460,"height":860,"color":"2","label":"Character States"},
+		{"id":"42c952407f6866d9","type":"group","x":-1760,"y":-480,"width":740,"height":615,"color":"#7650ce","label":"Komponente"},
+		{"id":"59b1f0cf5330b3b9","x":-230,"y":-428,"width":670,"height":598,"color":"1","type":"group","label":"Action"},
+		{"id":"37a266430cb282a0","x":-917,"y":-428,"width":637,"height":598,"color":"3","type":"group","label":"Movement"},
+		{"id":"d57c2819d55c3257","type":"text","text":"Movement\n- Idle\n- Laufen\n- Sprinten\n- Gehen?\n- Springen\n- Ducken\n","x":-1720,"y":-405,"width":300,"height":220},
+		{"id":"d90b6a079ddbb4fa","type":"text","text":"Inventar\n- dynamische groessen\n- \nGUI\n- Dynamische GUI\n- Drag and drop\n- ","x":-1720,"y":-125,"width":300,"height":220},
+		{"id":"456e55fa1c277784","type":"text","text":"0/3","x":-1720,"y":-465,"width":90,"height":50},
+		{"id":"026d794d45133202","type":"text","text":"Leben\n- Leben\n- Liste an eigenschaften (baro style)\n- ","x":-1374,"y":-125,"width":314,"height":220},
+		{"id":"8da50684d3f563e8","type":"text","text":"Interaktion\n- Maschinen\n- Item (aufklauben)\n- Spieler (Wiederbeleben)\n- Tueren? (Maschine?)","x":-1374,"y":-405,"width":314,"height":220},
+		{"id":"1f8a311747184f4a","x":-880,"y":-405,"width":250,"height":85,"type":"text","text":"Idle\n- Alles erlaubt\n"},
+		{"id":"74b2e248ec9ee27c","x":-580,"y":-405,"width":250,"height":110,"type":"text","text":"Jumping\n- Kein Nachladen\n- Kein Zielen"},
+		{"id":"e7b1a4c352be8753","x":-200,"y":-405,"width":250,"height":60,"type":"text","text":"Breaching?"},
+		{"id":"b3aceacda300549d","x":120,"y":-405,"width":250,"height":60,"type":"text","text":"Zielen\n"},
+		{"id":"c010594d0ea0c1c9","x":120,"y":-75,"width":250,"height":60,"type":"text","text":"Looting"},
+		{"id":"e03267b51a6b9895","x":120,"y":-295,"width":250,"height":60,"type":"text","text":"Nachladen"},
+		{"id":"c7518f7c615dd1d9","x":120,"y":-185,"width":250,"height":60,"type":"text","text":"Schiessen"},
+		{"id":"c34a9a417875f02a","x":-880,"y":-295,"width":250,"height":93,"type":"text","text":"Laufen\n- Kein Zielen\n"},
+		{"id":"9ef4e69f89e00783","x":-580,"y":-265,"width":250,"height":85,"type":"text","text":"OpenInventory\n- Nicht erlaubt"},
+		{"id":"2efb7ccc723e6d38","x":-580,"y":-131,"width":250,"height":148,"type":"text","text":"Sprinten\n- kein Nachladen\n- kein Zielen\n- kein heilen"},
+		{"id":"19c682a305df35c7","x":-880,"y":-45,"width":250,"height":108,"type":"text","text":"Leiter Kletern\n- kein Nachladen\n- Zielen?"},
+		{"id":"5673b98521066a68","x":-880,"y":-178,"width":250,"height":107,"type":"text","text":"Ducken\n- Alles erlaubt\n- Langsameres gehen"}
+	],
+	"edges":[]
+}
