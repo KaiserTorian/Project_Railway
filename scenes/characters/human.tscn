@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://eqmveid2wlee"]
+[gd_scene load_steps=19 format=3 uid="uid://eqmveid2wlee"]
 
 [ext_resource type="Script" uid="uid://bngdx1w3ryx7l" path="res://scenes/characters/human.gd" id="1_dnjla"]
 [ext_resource type="Script" uid="uid://d2y113xd5ckcw" path="res://scripts/state_machine/root_state_machine.gd" id="2_x0jl3"]
@@ -9,10 +9,11 @@
 [ext_resource type="Script" uid="uid://eoejey874c8u" path="res://scripts/state_machine/player_character/falling_state.gd" id="7_n8jd0"]
 [ext_resource type="Script" uid="uid://c1578bhcgi8vr" path="res://scripts/resource_scripts/root_component.gd" id="8_tk7ed"]
 [ext_resource type="Script" uid="uid://5s6gtr4g8wph" path="res://scripts/resource_scripts/component_prefab.gd" id="9_qf5vl"]
-[ext_resource type="Resource" uid="uid://c5pedwixtrqlp" path="res://resources/char_comps/simple_controller_human.tres" id="10_qf5vl"]
 [ext_resource type="Script" uid="uid://cnnqs3muog3m7" path="res://scripts/resource_scripts/misc/inventory.gd" id="11_dnppg"]
+[ext_resource type="Resource" uid="uid://b06s8u3cubydj" path="res://resources/misc/test_inv.tres" id="11_jn14g"]
 [ext_resource type="Resource" uid="uid://cgicowb4f2rj3" path="res://resources/misc/default_inv_slot.tres" id="11_ntk2y"]
 [ext_resource type="Script" uid="uid://dufa3lgfwvyti" path="res://scripts/resource_scripts/misc/inv_slot.gd" id="12_ntk2y"]
+[ext_resource type="Resource" uid="uid://c5pedwixtrqlp" path="res://resources/char_comps/simple_controller_human.tres" id="13_h2pfa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
 
@@ -21,12 +22,8 @@
 [sub_resource type="Environment" id="Environment_n8jd0"]
 background_energy_multiplier = 1.1
 
-[sub_resource type="Resource" id="Resource_ntk2y"]
+[sub_resource type="Resource" id="Resource_4lllx"]
 script = ExtResource("11_dnppg")
-slots = Array[ExtResource("12_ntk2y")]([ExtResource("11_ntk2y"), ExtResource("11_ntk2y"), null, null, null])
-identifier = "inv_test"
-component_name = "inv_test"
-always_unique = true
 metadata/_custom_type_script = "uid://cnnqs3muog3m7"
 
 [node name="Human" type="CharacterBody3D" node_paths=PackedStringArray("cam_controller")]
@@ -80,6 +77,7 @@ metadata/_custom_type_script = "uid://eoejey874c8u"
 
 [node name="RootComponent" type="Node" parent="." node_paths=PackedStringArray("parent")]
 script = ExtResource("8_tk7ed")
+inventory = SubResource("Resource_4lllx")
 parent = NodePath("..")
-components = Array[ExtResource("9_qf5vl")]([ExtResource("10_qf5vl"), SubResource("Resource_ntk2y")])
+components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("11_jn14g")])
 metadata/_custom_type_script = "uid://c1578bhcgi8vr"

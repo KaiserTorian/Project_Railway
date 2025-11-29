@@ -1,7 +1,7 @@
 class_name RootComponent
 extends Node
 
-
+@export var inventory:Inventory
 @export var parent: Node3D
 @export var components: Array[ComponentPrefab] = []
 
@@ -10,10 +10,10 @@ func _ready() -> void:
 	for component in self.components:
 		component.self_check()
 		component.ready(parent)
-		print(find_components(Inventory,true))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
 	for component in self.components:
 		component.process(delta, parent)
 
@@ -33,8 +33,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		component.unhandled_input(event, parent)
 	
 
-func find_components(component_type, first_component:bool) -> ComponentPrefab:
-	for i in self.components:
-		if is_instance_of(i,component_type):
-			return i
+func find_components(comp_type_identifier: String, first_component:bool) -> ComponentPrefab:
+	for comp in self.components:
+		if comp.identifier == comp_type_identifier:
+			return comp
 	return null

@@ -1,11 +1,13 @@
 class_name Inventory
 extends ComponentPrefab
 
+
 @export var default_slot: InvSlot = preload("res://resources/misc/default_inv_slot.tres")
 @export var slots: Array[InvSlot]
 
 
 func ready(owner:Node3D):
+	identifier = "Inventory"
 	setup_inv(owner)
 	generate_gui(owner)
 	
@@ -15,6 +17,7 @@ func setup_inv(owner: Node3D):
 	for index in self.slots.size():
 		if slots[index] == null:
 			slots[index] = default_slot.duplicate(true)
+			slots[index].owner_inventory = self
 			
 
 	
@@ -24,14 +27,19 @@ func generate_gui(owner: Node3D):
 
 func pickup(item: ItemBase, picker: Node3D, input_slot: InvSlot = null):
 	if not item.inventory_slot == null:
+		print("is already in inv")
 		return
 	
 	if not self._can_pickup_item(item):
+		print("Can not pick up items")
 		return
 	
 	if input_slot == null:
+		print("no input slot")
 		input_slot = self._find_first_slot(item)
 	
+	input_slot.items.append(item)
+	input_slot.item_identifier = item.prefab.identifier
 	item.inventory_slot = input_slot
 	
 	item.visible = false
@@ -59,9 +67,10 @@ func move(owner: Node3D):
 
 func _can_pickup_item(item: ItemBase) -> bool:
 	var item_type: String = item.prefab.identifier
+	
 	# Ist ein freier stack im inv?
 	for slot in self.slots:
-		if item_type == slot.item_type and slot.slot_size > slot.items.size():
+		if item_type == slot.item_identifier and slot.slot_size > slot.items.size():
 			return true
 	
 	# Ist ein freier slot im inv?
@@ -76,7 +85,7 @@ func _find_first_slot(item: ItemBase) -> InvSlot:
 	var item_type: String = item.prefab.identifier
 	# Ist ein freier stack im inv?
 	for slot in self.slots:
-		if item_type == slot.item_type and slot.slot_size > slot.items.size():
+		if item_type == slot.item_identifier and slot.slot_size > slot.items.size():
 			return slot
 	
 	# Ist ein freier slot im inv?

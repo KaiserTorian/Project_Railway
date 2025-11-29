@@ -23,7 +23,7 @@ func unhandled_input(event: InputEvent, _owner:Node3D) -> void:
 		#print(temp_mouse_input)
 
 
-func _input(event, _owner:Node3D):
+func input(event, _owner:Node3D):
 	if event.is_action_pressed("ui_cancel"):
 		if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

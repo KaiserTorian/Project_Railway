@@ -2,19 +2,15 @@
 class_name ComponentPrefab
 extends Resource
 
-# @export var identifier: String
-# @export var component_name: String
+
+@export var identifier: String
 @export_multiline var component_description:String
 @export var always_unique: bool = false
 
 func self_check() -> void:
-	# if identifier == null:
-		# print("identifier in ", self, " is null")
-		# return
-	
-	# if self.component_name == null:
-		# self.component_name = self.identifier
-
+	if identifier == null:
+		print("identifier in ", self, " is null")
+		return
 
 func ready(_parent: Node3D):
 	pass

@@ -3,7 +3,6 @@ extends Node3D
 
 const BASE_ITEM_SCENE: PackedScene = preload("res://scenes/items-misc/base_item.tscn")
 var all_items:Dictionary[int,ItemBase] = {}
- 
 
 func spawn_item(item_prefab: ItemPrefab,
 		spawn_position: Vector3 = Vector3(0,0,0),
@@ -11,9 +10,9 @@ func spawn_item(item_prefab: ItemPrefab,
 		inventory_owner: Node3D = null,
 		inventory_slot: InvSlot = null,
 		parent: Node3D = self):
-	
+	print("spawn_item()")
 	if item_prefab == null:
-		push_warning("item_prefab in spawn_item() is null")
+		printerr("item_prefab in spawn_item() is null")
 		return
 	
 	var item_instance: ItemBase = BASE_ITEM_SCENE.instantiate()
@@ -34,6 +33,7 @@ func spawn_item(item_prefab: ItemPrefab,
 	item_instance.global_rotation = spawn_rotation
 	
 	# after the item was spawend the target inv should pick it up
+	print(inventory_slot)
 	if not inventory_slot == null:
 		inventory_slot.owner_inventory.pickup(item_instance,inventory_owner,null)
 		

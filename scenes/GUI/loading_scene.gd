@@ -11,10 +11,8 @@ func _ready() -> void:
 
 
 func update_progressbar(value: float):
-	print("update_progressbar: ", value)
 	progress_bar.set_value_no_signal(value * 100)
 
 
 func finish_loading():
-	print("finish_loading")
 	self.queue_free()
