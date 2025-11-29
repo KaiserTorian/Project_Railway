@@ -1,5 +1,15 @@
 Das werden die grundlegenden Sachen sein die ich fuer den ersten Gameplay test brauche.
 
+
+Global Managers
+[ ] Gama Manager
+[ ] Scene Manager
+[ ] Item Manager
+[ ] Character MAanger
+[ ] UI Manager
+
+
+
 Spiel Mechanik:
 [ ] |[[Global Managers.canvas|Game Manager]]
 [ ] Menu

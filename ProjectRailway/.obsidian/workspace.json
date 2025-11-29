@@ -11,17 +11,14 @@
             "id": "fcbb4027332cbc68",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Systeme Inv.canvas",
-                "viewState": {
-                  "x": -297.5,
-                  "y": 210,
-                  "zoom": -0.4141805375423967
-                }
+                "file": "Managers/UI Manager.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Systeme Inv"
+              "icon": "lucide-file",
+              "title": "UI Manager"
             }
           }
         ]
@@ -97,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Global Managers.canvas",
+                "file": "Managers/UI Manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rückverweise für Global Managers"
+              "title": "Backlinks for UI Manager"
             }
           },
           {
@@ -158,8 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,17 +171,22 @@
   },
   "active": "fcbb4027332cbc68",
   "lastOpenFiles": [
-    "Systeme Items.canvas",
-    "Systeme Inv.canvas",
+    "Managers/UI Manager.canvas",
+    "Managers/UI Manager.md",
     "Mechaniken.md",
-    "Map Generation.md",
+    "Managers",
     "!Project Railway.md",
-    "Items.md",
+    "Char Komponente.canvas",
     "Global Managers.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Systeme Items.canvas",
+    "Züge.md",
+    "Systeme Inv.canvas",
+    "Map Generation.md",
+    "Items.md",
     "GUIs.canvas",
     "File System.canvas",
-    "Char Komponente.canvas",
-    "Züge.md",
     "Waffen.md",
     "Items/Misc.md",
     "Items/Waffen.md",
