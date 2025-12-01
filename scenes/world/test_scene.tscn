@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b3bhtdx5ym8ck" path="res://scripts/world/item_spawn_node.gd" id="1_j1f80"]
 [ext_resource type="Script" uid="uid://dfal78xoae7t0" path="res://scripts/world/characters_spawn_node.gd" id="2_cufpa"]
-[ext_resource type="Script" uid="uid://5s6gtr4g8wph" path="res://scripts/resource_scripts/component_prefab.gd" id="2_djhae"]
-[ext_resource type="Script" uid="uid://henk1sksno5l" path="res://scripts/resource_scripts/items/item_prefab.gd" id="3_h7iep"]
+[ext_resource type="Script" uid="uid://5s6gtr4g8wph" path="res://components/component_prefab.gd" id="2_djhae"]
+[ext_resource type="Script" uid="uid://henk1sksno5l" path="res://items/prefabs/item_prefab.gd" id="3_h7iep"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_a5oyu"]
 

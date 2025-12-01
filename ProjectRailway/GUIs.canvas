@@ -1,7 +1,0 @@
-{
-	"nodes":[
-		{"id":"065fa1d2997d8b33","type":"group","x":-600,"y":-380,"width":1220,"height":800,"label":"Main Menu"},
-		{"id":"009b31a658c19ac0","type":"text","text":"### Play\n### Settings\n### Quit\n","x":-140,"y":-160,"width":250,"height":153}
-	],
-	"edges":[]
-}

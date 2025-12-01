@@ -1,19 +1,52 @@
+Das werden die grundlegenden Sachen sein die ich fuer den ersten Gameplay test brauche.
 
-TODO:
 
-[[Mechaniken]]
-[2/10]
+Global Managers
+[0/2] Game Manager
+	- Global Enums():
+	- Global Signals():
+	
+[1/1] Scene Manager
+	- Loading screen():
+	 
+[2/2] Item Manager
+	- spawn():
+	- despawn():
+	 
+[2/2] Character Manager
+	- spawn():
+	- despawn():
+	 
+[0/2] GUI Manager
+	- show():
+	- hide():
+	- init():
 
-[[Map Generation]]
-[ ]
 
-[[Züge]]
-[ ]
+Characters:
+[ ] Character Components
+	- movement
+	- inventory
 
-[[Items]]
-[ ]
 
-Multiplayer
+Items
+[ ] Item Base scene=
+[ ] Item Components
 
-Feinde/Bots
 
+GUI
+[ ] Main menu
+[ ] ESC menu
+[ ] Settings
+
+[ ] |[[InvGuiSystem.canvas|InvGui]]
+
+
+Map
+
+
+Zug System
+[ ] Zug Klasse
+[ ] Wagon Klasse
+[ ] Zug spawn
+[ ] Zug bewegen
