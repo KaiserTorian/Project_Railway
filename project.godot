@@ -33,6 +33,9 @@ enabled=PackedStringArray("res://addons/Hidefolders/plugin.cfg", "res://addons/f
 folder_colors={
 "res://addons/": "gray",
 "res://assets/": "yellow",
+"res://characters/": "orange",
+"res://components/": "red",
+"res://items/": "teal",
 "res://scenes/": "green",
 "res://scripts/": "purple"
 }

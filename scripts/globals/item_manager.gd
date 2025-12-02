@@ -7,10 +7,11 @@ var all_items:Dictionary[int,ItemBase] = {}
 func spawn_item(item_prefab: ItemPrefab,
 		spawn_position: Vector3 = Vector3(0,0,0),
 		spawn_rotation: Vector3 = Vector3(0,0,0),
-		inventory_owner: Node3D = null,
-		inventory_slot: InvSlot = null,
+		inventory: Inventory = null,
+		inventory_position: Vector2i = Vector2i(1,1),
+		inventory_rotation: int = 1,
 		parent: Node3D = self):
-	print("spawn_item()")
+	
 	if item_prefab == null:
 		printerr("item_prefab in spawn_item() is null")
 		return
@@ -33,9 +34,8 @@ func spawn_item(item_prefab: ItemPrefab,
 	item_instance.global_rotation = spawn_rotation
 	
 	# after the item was spawend the target inv should pick it up
-	print(inventory_slot)
-	if not inventory_slot == null:
-		inventory_slot.owner_inventory.pickup(item_instance,inventory_owner,null)
+	if not inventory == null:
+		inventory.try_insert_item(item_instance, inventory_position, inventory_rotation)
 		
 
 
@@ -43,8 +43,9 @@ func despawn_item(item: ItemBase):
 	if item == null:
 		return
 	
-	if not item.inventory_slot == null:
-		item.inventory_slot.owner_inventory.drop(item, self, Vector3(0,0,0))
+	if not item.parent_inventory == null:
+		item.parent_inventory.try_drop_item(item, Vector3(0,0,0))
+		
 	if not item.uid == null:
 		self.all_items.erase(item.uid)
 	
