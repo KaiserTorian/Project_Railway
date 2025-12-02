@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"9f078a17f6a38042","type":"group","x":-820,"y":-560,"width":720,"height":720,"color":"4","label":"INV GUI"},
+		{"id":"9eaca8ae6e2d8774","type":"text","text":"CharacterMenu","x":-380,"y":-720,"width":250,"height":60},
+		{"id":"6fc3508c8b0c3836","type":"text","text":"InvTab","x":-380,"y":-540,"width":250,"height":60},
+		{"id":"a78c29e41b572d46","type":"text","text":"VisualInv","x":-380,"y":-400,"width":250,"height":60},
+		{"id":"8d1a0f62a882faf1","type":"text","text":"drop_data():\nthe item stack","x":-760,"y":-360,"width":250,"height":120},
+		{"id":"9859e0aeee69c52a","type":"text","text":"can_drop_data():\nis there space for the Item?","x":-760,"y":-180,"width":250,"height":130},
+		{"id":"fb1e4d84749efd98","type":"text","text":"get_drag_data():\nself","x":-760,"y":0,"width":250,"height":120},
+		{"id":"534eb7f2f457dce9","type":"text","text":"InvArea\nThe Area where the Inv Grid is located","x":-380,"y":-265,"width":250,"height":110},
+		{"id":"c054ae751f83ab9a","type":"text","text":"VisualStack\nInv Slot/Pos\nGets the Inv size from ItemStack\n","x":-380,"y":0,"width":250,"height":120},
+		{"id":"4f228709a01f2766","type":"text","text":"Inventory","x":200,"y":-720,"width":250,"height":60},
+		{"id":"a7bb05ab21e9e995","type":"text","text":"ItemPrefab","x":200,"y":-80,"width":250,"height":60},
+		{"id":"c417bc4f7e75e06b","type":"text","text":"Item","x":200,"y":-260,"width":250,"height":60},
+		{"id":"4f078b915d5f9e7c","type":"text","text":"ParentStackItem\nIst am ITEM!!!\ncount of all items\nGets the Inv size from Item Prefab","x":200,"y":-480,"width":250,"height":120}
+	],
+	"edges":[
+		{"id":"a5000f4179bc84b7","fromNode":"9eaca8ae6e2d8774","fromSide":"bottom","toNode":"6fc3508c8b0c3836","toSide":"top"},
+		{"id":"71b70df269e45c49","fromNode":"6fc3508c8b0c3836","fromSide":"bottom","toNode":"a78c29e41b572d46","toSide":"top"},
+		{"id":"88214500486a541f","fromNode":"4f228709a01f2766","fromSide":"bottom","toNode":"4f078b915d5f9e7c","toSide":"top","fromEnd":"arrow","label":"In an Array"},
+		{"id":"38d662148bca74c0","fromNode":"4f228709a01f2766","fromSide":"left","toNode":"a78c29e41b572d46","toSide":"right","label":"Code reference"},
+		{"id":"5a5f3566aeb1c576","fromNode":"4f078b915d5f9e7c","fromSide":"bottom","toNode":"c417bc4f7e75e06b","toSide":"top","fromEnd":"arrow","label":"In an Array"},
+		{"id":"6dd512d459986c5f","fromNode":"a7bb05ab21e9e995","fromSide":"top","toNode":"c417bc4f7e75e06b","toSide":"bottom"},
+		{"id":"b7dabbaac6d940cf","fromNode":"4f078b915d5f9e7c","fromSide":"left","toNode":"c054ae751f83ab9a","toSide":"right","fromEnd":"arrow","label":"Reference"},
+		{"id":"b42f160f6c078a5c","fromNode":"a78c29e41b572d46","fromSide":"bottom","toNode":"534eb7f2f457dce9","toSide":"top"},
+		{"id":"01d987b7a5d0e534","fromNode":"534eb7f2f457dce9","fromSide":"bottom","toNode":"c054ae751f83ab9a","toSide":"top","label":"Child"},
+		{"id":"34a88d6e37736690","fromNode":"534eb7f2f457dce9","fromSide":"left","toNode":"9859e0aeee69c52a","toSide":"right"},
+		{"id":"746f35aad4d012f6","fromNode":"c054ae751f83ab9a","fromSide":"left","toNode":"fb1e4d84749efd98","toSide":"right"},
+		{"id":"32468305ed8f2d5f","fromNode":"534eb7f2f457dce9","fromSide":"left","toNode":"8d1a0f62a882faf1","toSide":"right"}
+	]
+}

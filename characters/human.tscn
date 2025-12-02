@@ -1,0 +1,81 @@
+[gd_scene load_steps=17 format=3 uid="uid://eqmveid2wlee"]
+
+[ext_resource type="Script" uid="uid://bngdx1w3ryx7l" path="res://characters/human.gd" id="1_dnjla"]
+[ext_resource type="Script" uid="uid://d2y113xd5ckcw" path="res://characters/state_mashine/root_state_machine.gd" id="2_x0jl3"]
+[ext_resource type="Script" uid="uid://c48y1d8whg2lm" path="res://characters/state_mashine/state_machine.gd" id="3_evndh"]
+[ext_resource type="Script" uid="uid://b34edioxustne" path="res://characters/state_mashine/player_character/idle_state.gd" id="4_h1q25"]
+[ext_resource type="Script" uid="uid://cqmek6tqnkbv1" path="res://characters/state_mashine/player_character/running_state.gd" id="5_j31ep"]
+[ext_resource type="Script" uid="uid://d0vocsbu2mera" path="res://characters/state_mashine/player_character/climbing_state.gd" id="6_6t23p"]
+[ext_resource type="Script" uid="uid://eoejey874c8u" path="res://characters/state_mashine/player_character/falling_state.gd" id="7_n8jd0"]
+[ext_resource type="Script" uid="uid://c1578bhcgi8vr" path="res://components/root_component.gd" id="8_tk7ed"]
+[ext_resource type="Script" uid="uid://5s6gtr4g8wph" path="res://components/component_prefab.gd" id="9_qf5vl"]
+[ext_resource type="Script" uid="uid://cnnqs3muog3m7" path="res://components/_scripts/shared/inventory.gd" id="11_dnppg"]
+[ext_resource type="Resource" uid="uid://b06s8u3cubydj" path="res://components/shared_comps/test_inv.tres" id="11_jn14g"]
+[ext_resource type="Resource" uid="uid://c5pedwixtrqlp" path="res://components/char_comps/simple_controller_human.tres" id="13_h2pfa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6p3mc"]
+
+[sub_resource type="Environment" id="Environment_n8jd0"]
+background_energy_multiplier = 1.1
+
+[sub_resource type="Resource" id="Resource_4lllx"]
+script = ExtResource("11_dnppg")
+metadata/_custom_type_script = "uid://cnnqs3muog3m7"
+
+[node name="Human" type="CharacterBody3D" node_paths=PackedStringArray("cam_controller")]
+script = ExtResource("1_dnjla")
+cam_controller = NodePath("CameraController")
+metadata/_custom_type_script = "uid://bngdx1w3ryx7l"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6p3mc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_6p3mc")
+
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53294945, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.698931)
+environment = SubResource("Environment_n8jd0")
+current = true
+
+[node name="RootStateMachine" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("2_x0jl3")
+parent = NodePath("..")
+metadata/_custom_type_script = "uid://d2y113xd5ckcw"
+
+[node name="MovementSM" type="Node" parent="RootStateMachine" node_paths=PackedStringArray("default_state")]
+script = ExtResource("3_evndh")
+default_state = NodePath("Idle_state")
+metadata/_custom_type_script = "uid://c48y1d8whg2lm"
+
+[node name="Idle_state" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("4_h1q25")
+identifier = "IdleState"
+metadata/_custom_type_script = "uid://b34edioxustne"
+
+[node name="RunningState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("5_j31ep")
+identifier = "RunningState"
+metadata/_custom_type_script = "uid://cqmek6tqnkbv1"
+
+[node name="ClimbingState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("6_6t23p")
+identifier = "ClimbingState"
+metadata/_custom_type_script = "uid://d0vocsbu2mera"
+
+[node name="FallingState" type="Node" parent="RootStateMachine/MovementSM"]
+script = ExtResource("7_n8jd0")
+identifier = "FallingState"
+metadata/_custom_type_script = "uid://eoejey874c8u"
+
+[node name="RootComponent" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("8_tk7ed")
+inventory = SubResource("Resource_4lllx")
+parent = NodePath("..")
+components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("11_jn14g")])
+metadata/_custom_type_script = "uid://c1578bhcgi8vr"

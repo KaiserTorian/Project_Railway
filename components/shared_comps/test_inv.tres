@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=2 format=3 uid="uid://b06s8u3cubydj"]
+
+[ext_resource type="Script" uid="uid://cnnqs3muog3m7" path="res://components/_scripts/shared/inventory.gd" id="1_12o8i"]
+
+[resource]
+script = ExtResource("1_12o8i")
+inventory_size = Vector2i(1, 1)
+always_unique = true
+metadata/_custom_type_script = "uid://cnnqs3muog3m7"

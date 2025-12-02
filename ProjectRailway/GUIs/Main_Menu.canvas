@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"5b8b9aa8a14f3f5c","type":"group","x":-1300,"y":-980,"width":1680,"height":980,"label":"Screen"},
+		{"id":"3d1fd26cdaed2956","type":"group","x":-1180,"y":-780,"width":1460,"height":700,"label":"Category"},
+		{"id":"7b8b1416b9f97029","type":"text","text":"Load Game\n","x":-880,"y":-900,"width":250,"height":60},
+		{"id":"a1df275d00508376","type":"text","text":"Mods?","x":-280,"y":-900,"width":250,"height":60},
+		{"id":"718b09c5bab821b4","type":"text","text":"New Game","x":-1180,"y":-900,"width":250,"height":60},
+		{"id":"d380b92b787e838e","type":"text","text":"Quit","x":20,"y":-900,"width":250,"height":60},
+		{"id":"00db9a8a29ff6519","type":"text","text":"Settings","x":-580,"y":-900,"width":250,"height":60},
+		{"id":"108d537fee96a9ae","x":-580,"y":-460,"width":250,"height":60,"type":"text","text":"Changes depending on the selection on top"}
+	],
+	"edges":[]
+}

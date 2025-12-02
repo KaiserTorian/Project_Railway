@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtu6hqw1jucvy"]
+
+[ext_resource type="Script" uid="uid://jdnrne68ga6y" path="res://items/item_base.gd" id="1_m53hc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m53hc"]
+
+[node name="Item" type="RigidBody3D"]
+script = ExtResource("1_m53hc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_m53hc")

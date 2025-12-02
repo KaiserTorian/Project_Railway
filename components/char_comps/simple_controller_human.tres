@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SimplePlayerController" load_steps=2 format=3 uid="uid://c5pedwixtrqlp"]
+
+[ext_resource type="Script" uid="uid://bvtfamtjtvx84" path="res://components/_scripts/char/simple_player_controller.gd" id="1_5a3li"]
+
+[resource]
+script = ExtResource("1_5a3li")
+identifier = "simple_player_controller_human"
+component_name = "Simple_Player_Controller_Human"
+metadata/_custom_type_script = "uid://bvtfamtjtvx84"
