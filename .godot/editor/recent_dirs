@@ -1,7 +1,9 @@
-/home/asbest/.local/share/JetBrainsRider/bin/
-res://resources/misc/
-res://resources/char_comps/
+res://components/char_comps/
+res://scripts/globals
+res://scripts/globals/
+res://gui
+/home/asbest/work/Godot/Project_Railway/addons/themes
+res://scenes
 /home/asbest/work/Godot/Project_Railway/assets/fonts
 res://
 res://scenes/GUI
-res://scenes

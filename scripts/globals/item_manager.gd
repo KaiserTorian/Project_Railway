@@ -8,7 +8,7 @@ func spawn_item(item_prefab: ItemPrefab,
 		spawn_position: Vector3 = Vector3(0,0,0),
 		spawn_rotation: Vector3 = Vector3(0,0,0),
 		inventory: Inventory = null,
-		inventory_position: Vector2i = Vector2i(1,1),
+		inventory_position: int = 1,
 		inventory_rotation: int = 1,
 		parent: Node3D = self):
 	

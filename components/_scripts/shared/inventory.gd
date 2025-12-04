@@ -2,17 +2,22 @@ class_name Inventory
 extends ComponentPrefab
 
 
-@export var inventory_size: Vector2i
+@export var inventory_size:int = 1
+@export var inventory_colums: int = -1
 
 var all_items: Array[ItemBase]
 var inventory_grid: Array
+var allow_multy_size:bool = true
 
-func ready(owner:Node3D):
+func ready(_owner:Node3D):
 	identifier = "inventory"
 	always_unique = true
+	
+	if inventory_colums < 1:
+		allow_multy_size = false
 
 
-func try_insert_item(item: ItemBase, intput_pos: Vector2 = Vector2(-1,-1), input_rotation: int = 1) -> bool:
+func try_insert_item(item: ItemBase, _intput_pos: int = 1, _input_rotation: int = 1) -> bool:
 	if not item.parent_inventory == null:
 		print("is already in inv")
 		return false
@@ -25,8 +30,9 @@ func try_insert_item(item: ItemBase, intput_pos: Vector2 = Vector2(-1,-1), input
 	item.parent_inventory = self
 	
 	item.visible = false
+	item.freeze = true
 	item.sleeping = true
-	item.item_collition.disabled = false
+	item.item_collition.disabled = true
 	
 	return true
 
@@ -41,8 +47,9 @@ func try_drop_item(item: ItemBase, drop_pos: Vector3) -> bool:
 	item.parent_inventory = null
 	
 	item.sleeping = false
+	item.freeze = true
 	item.visible = true
-	item.item_collition.disabled = true
+	item.item_collition.disabled = false
 	
 	return true
 	
@@ -55,6 +62,6 @@ func find_item_index(item :ItemBase) -> int:
 	return -1
 
 
-func _can_pickup_item(item: ItemBase) -> bool:
+func _can_pickup_item(_item: ItemBase) -> bool:
 	return true
 	

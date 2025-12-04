@@ -20,5 +20,5 @@ func _process(_delta: float) -> void:
 		# spawn in player in random slot
 		print("Spawn Item")
 		for i in CharacterManager.all_characters:
-			ItemManager.spawn_item(item, self.global_position, Vector3(0,0,0), CharacterManager.all_characters[i].get_child(4).components[1], Vector2i(1,1),1)
+			ItemManager.spawn_item(item, self.global_position, Vector3(0,0,0), CharacterManager.all_characters[i].get_child(4).components[1], 1 ,1)
 		

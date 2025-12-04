@@ -1,6 +1,7 @@
+InteractionController
+GuiRefs
 InvSlot
 Inventory
 SimplePlayerController
-TestComp
 ItemPrefab
 Resource

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://eqmveid2wlee"]
+[gd_scene load_steps=18 format=3 uid="uid://eqmveid2wlee"]
 
 [ext_resource type="Script" uid="uid://bngdx1w3ryx7l" path="res://characters/human.gd" id="1_dnjla"]
 [ext_resource type="Script" uid="uid://d2y113xd5ckcw" path="res://characters/state_mashine/root_state_machine.gd" id="2_x0jl3"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cnnqs3muog3m7" path="res://components/_scripts/shared/inventory.gd" id="11_dnppg"]
 [ext_resource type="Resource" uid="uid://b06s8u3cubydj" path="res://components/shared_comps/test_inv.tres" id="11_jn14g"]
 [ext_resource type="Resource" uid="uid://c5pedwixtrqlp" path="res://components/char_comps/simple_controller_human.tres" id="13_h2pfa"]
+[ext_resource type="Resource" uid="uid://cbq6culptiqe" path="res://components/char_comps/simple_interactions_controller.tres" id="13_mf0ri"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
 
@@ -77,5 +78,5 @@ metadata/_custom_type_script = "uid://eoejey874c8u"
 script = ExtResource("8_tk7ed")
 inventory = SubResource("Resource_4lllx")
 parent = NodePath("..")
-components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("11_jn14g")])
+components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("11_jn14g"), ExtResource("13_mf0ri")])
 metadata/_custom_type_script = "uid://c1578bhcgi8vr"

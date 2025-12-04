@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InteractionController" load_steps=2 format=3 uid="uid://cbq6culptiqe"]
+
+[ext_resource type="Script" uid="uid://ljg8eu6lt211" path="res://components/_scripts/char/interaction_controller.gd" id="1_0w5oo"]
+
+[resource]
+script = ExtResource("1_0w5oo")
+can_open_Inventorys = true
+metadata/_custom_type_script = "uid://ljg8eu6lt211"

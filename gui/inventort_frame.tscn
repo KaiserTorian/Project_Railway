@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyp68t0f4j5j3"]
+
+[ext_resource type="Script" uid="uid://da73vvb0pw64n" path="res://gui/inventort_frame.gd" id="1_u6om2"]
+
+[node name="InventortFrame" type="Control" node_paths=PackedStringArray("visual_grid")]
+layout_mode = 3
+anchor_left = 0.33
+anchor_right = 0.66
+anchor_bottom = 1.0
+offset_left = -0.13601685
+offset_right = -0.13598633
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u6om2")
+visual_grid = NodePath("ScrollContainer/GridContainer")
+
+[node name="BackGroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 5

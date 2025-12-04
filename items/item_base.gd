@@ -3,7 +3,6 @@ extends RigidBody3D
 
 ## This is the base of the Item sceen that adds
 
- 
 var uid: int
 var prefab: ItemPrefab
 var sprite: Image

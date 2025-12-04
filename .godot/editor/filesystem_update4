@@ -1,0 +1,8 @@
+res://characters/human.tscn
+res://components/_scripts/char/interaction_controller.gd
+res://scripts/world/item_spawn_node.gd
+res://components/char_comps/simple_interactions_controller.tres
+res://scripts/globals/item_manager.gd
+res://scripts/globals/game_manager.gd
+res://scripts/globals/utility_manager.gd
+res://gui/character_menu.tscn
