@@ -23,6 +23,7 @@ Uid="*res://scripts/globals/uid.gd"
 ItemManager="*res://scripts/globals/item_manager.gd"
 CharacterManager="*res://scripts/globals/character_manager.gd"
 SceneManager="*res://scripts/globals/scene_manager.gd"
+GuiManager="*res://scripts/globals/gui_manager.gd"
 
 [editor_plugins]
 

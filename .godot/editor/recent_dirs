@@ -1,9 +1,10 @@
-res://components/char_comps/
 res://scripts/globals
+/home/navi/Godot/Project_Railway/addons/themes
+res://addons/themes
+res://assets/fonts
+res://components/char_comps/
 res://scripts/globals/
 res://gui
-/home/asbest/work/Godot/Project_Railway/addons/themes
 res://scenes
-/home/asbest/work/Godot/Project_Railway/assets/fonts
 res://
 res://scenes/GUI

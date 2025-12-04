@@ -9,6 +9,7 @@ var all_items: Array[ItemBase]
 var inventory_grid: Array
 var allow_multy_size:bool = true
 
+
 func ready(_owner:Node3D):
 	identifier = "inventory"
 	always_unique = true
@@ -22,7 +23,7 @@ func try_insert_item(item: ItemBase, _intput_pos: int = 1, _input_rotation: int 
 		print("is already in inv")
 		return false
 	
-	if not self._can_pickup_item(item):
+	if not self._can_pickup_item(item, _intput_pos, _input_rotation):
 		print("Can not pick up items")
 		return false
 	
@@ -62,6 +63,7 @@ func find_item_index(item :ItemBase) -> int:
 	return -1
 
 
-func _can_pickup_item(_item: ItemBase) -> bool:
+func _can_pickup_item(_item: ItemBase, _intput_pos: int, _input_rotation: int) -> bool:
+	# Is the slot free?
 	return true
 	

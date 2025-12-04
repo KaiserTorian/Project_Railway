@@ -33,7 +33,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		component.unhandled_input(event, parent)
 	
 
-func find_components(comp_type_identifier: String, first_component:bool) -> ComponentPrefab:
+func find_components(comp_type_identifier: String) -> ComponentPrefab:
 	for comp in self.components:
 		if comp.identifier == comp_type_identifier:
 			return comp
