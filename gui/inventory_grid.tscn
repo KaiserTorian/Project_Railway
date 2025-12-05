@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyp68t0f4j5j3"]
 
-[ext_resource type="Script" uid="uid://da73vvb0pw64n" path="res://gui/inventort_frame.gd" id="1_u6om2"]
+[ext_resource type="Script" uid="uid://da73vvb0pw64n" path="res://gui/inventory_grid.gd" id="1_eoi0y"]
 
-[node name="InventortFrame" type="Control" node_paths=PackedStringArray("visual_grid")]
+[node name="InventortGrid" type="Control" node_paths=PackedStringArray("visual_grid")]
 layout_mode = 3
 anchor_left = 0.33
 anchor_right = 0.66
@@ -11,7 +11,7 @@ offset_left = -0.13601685
 offset_right = -0.13598633
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u6om2")
+script = ExtResource("1_eoi0y")
 visual_grid = NodePath("ScrollContainer/GridContainer")
 
 [node name="BackGroundPanel" type="Panel" parent="."]

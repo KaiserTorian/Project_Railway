@@ -1,3 +1,5 @@
+TabContainer
+TabBar
 CharacterMenu
 Panel
 ScrollContainer
@@ -11,5 +13,3 @@ ColorRect
 MarginContainer
 Human
 RootComponent
-CollisionShape3D
-RigidBody3D

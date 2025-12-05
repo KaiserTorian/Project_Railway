@@ -1,12 +1,13 @@
 @warning_ignore_start("narrowing_conversion")
 extends Control
+class_name InventoryGrid
 
 
 
 const INV_SLOT_RELATIVE_SIZE: float = 0.05
 
-var visual_grid: GridContainer
-var logic_grid: GridContainer
+@export var visual_grid: GridContainer
+@export var logic_grid: GridContainer
 
 # INFO: nur zum Testen
 @export var inventory_size:int = 40
@@ -23,7 +24,7 @@ var slot_size: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if self.inventory_colums < 1:
-		self.is_single_size_only = false
+		self.allow_multy_size = false
 	
 	init_inv_gui() 
 
@@ -69,13 +70,14 @@ func init_inv_gui():
 
 func update_ui_inv():
 	if not self.is_visible_in_tree():
+		print("return")
 		return
 	
 	
 	# update slot size
-	if inventory_colums > 0 and self.get_viewport().get_visible_rect().size.x == last_frame_screen_size.x:
+	if inventory_colums > 0:
 		slot_size = (self.size.x - inventory_colums * visual_grid.get_theme_constant("h_separation")) / inventory_colums
-	elif self.get_viewport().get_visible_rect().size.x == last_frame_screen_size.x :
+	else:
 		slot_size = get_viewport().get_visible_rect().size.x * INV_SLOT_RELATIVE_SIZE
 	
 	

@@ -25,9 +25,11 @@ background_energy_multiplier = 1.1
 script = ExtResource("11_dnppg")
 metadata/_custom_type_script = "uid://cnnqs3muog3m7"
 
-[node name="Human" type="CharacterBody3D" node_paths=PackedStringArray("cam_controller")]
+[node name="Human" type="CharacterBody3D" node_paths=PackedStringArray("cam_controller", "root_state_machine", "root_component")]
 script = ExtResource("1_dnjla")
 cam_controller = NodePath("CameraController")
+root_state_machine = NodePath("RootStateMachine")
+root_component = NodePath("RootComponent")
 metadata/_custom_type_script = "uid://bngdx1w3ryx7l"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -78,5 +80,5 @@ metadata/_custom_type_script = "uid://eoejey874c8u"
 script = ExtResource("8_tk7ed")
 inventory = SubResource("Resource_4lllx")
 parent = NodePath("..")
-components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("11_jn14g"), ExtResource("13_mf0ri")])
+components = Array[ExtResource("9_qf5vl")]([ExtResource("13_h2pfa"), ExtResource("13_mf0ri"), ExtResource("11_jn14g")])
 metadata/_custom_type_script = "uid://c1578bhcgi8vr"

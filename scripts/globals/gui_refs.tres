@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="GuiRefs" load_steps=3 format=3 uid="uid://bbo43qcnbmu6"]
 
-[ext_resource type="PackedScene" uid="uid://b1uw0mnbkf17k" path="res://gui/character_menu.tscn" id="1_00ga5"]
-[ext_resource type="Script" uid="uid://bjqqd44lxu0bh" path="res://gui/gui_refs.gd" id="1_vowj5"]
+[ext_resource type="PackedScene" uid="uid://b1uw0mnbkf17k" path="res://gui/Inventory.tscn" id="1_00ga5"]
+[ext_resource type="Script" uid="uid://bjqqd44lxu0bh" path="res://scripts/globals/gui_refs.gd" id="1_vowj5"]
 
 [resource]
 script = ExtResource("1_vowj5")

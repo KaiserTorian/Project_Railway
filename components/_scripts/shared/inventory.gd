@@ -53,7 +53,7 @@ func try_drop_item(item: ItemBase, drop_pos: Vector3) -> bool:
 	item.item_collition.disabled = false
 	
 	return true
-	
+
 
 func find_item_index(item :ItemBase) -> int:
 	for index in all_items.size():

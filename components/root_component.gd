@@ -11,9 +11,9 @@ func _ready() -> void:
 		component.self_check()
 		component.ready(parent)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-
 	for component in self.components:
 		component.process(delta, parent)
 
@@ -31,7 +31,7 @@ func _input(event: InputEvent) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	for component in self.components:
 		component.unhandled_input(event, parent)
-	
+
 
 func find_components(comp_type_identifier: String) -> ComponentPrefab:
 	for comp in self.components:

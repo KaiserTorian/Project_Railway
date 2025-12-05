@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1uw0mnbkf17k"]
+
+[ext_resource type="Script" uid="uid://eceocnxukerl" path="res://gui/inventory.gd" id="1_uskke"]
+[ext_resource type="PackedScene" uid="uid://dyp68t0f4j5j3" path="res://gui/inventory_grid.tscn" id="2_c3if7"]
+
+[node name="Inventory" type="Control" node_paths=PackedStringArray("inv")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uskke")
+inv = NodePath("InventortGrid")
+metadata/_custom_type_script = "uid://eceocnxukerl"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventortGrid" parent="." instance=ExtResource("2_c3if7")]
+layout_mode = 1
+anchor_left = 0.09560418
+anchor_top = 0.08024691
+anchor_right = 0.3777222
+anchor_bottom = 0.9027778
+metadata/_edit_use_anchors_ = true

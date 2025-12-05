@@ -1,19 +1,13 @@
 extends Node
 
-
-enum gui_indentifer {
-		CHARACTER_MENU,
-		}
-
-
-var all_guis: Dictionary[String, GUIPrefab]
+var all_guis: Dictionary[String, Control]
 
 func _ready() -> void:
-	get_saved_guis()
+	init_saved_guis()
 
 
 ## CAUTION: Magic string that point to the gui_refs.tres
-func get_saved_guis():
+func init_saved_guis():
 	# Get all GUIs and put them in the global_guis dict
 	var gui_resurce = preload("res://scripts/globals/gui_refs.tres")
 	
@@ -25,9 +19,9 @@ func get_saved_guis():
 
 
 
-func get_gui(identifier: String)-> GUIPrefab:
-	for key in self.global_guis:
+func get_gui(identifier: String)-> Control:
+	for key in self.all_guis:
 		if identifier == key:
-			return self.global_guis.all_guis[identifier]
+			return self.all_guis[identifier]
 	
 	return null
